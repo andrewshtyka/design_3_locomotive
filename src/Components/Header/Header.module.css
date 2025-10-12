@@ -1,0 +1,69 @@
+/* #region = COMPONENTS */
+
+.c_icon {
+  grid-column: 3 / 4;
+  height: var(--2);
+}
+
+.c_icon::after {
+  content: "🔝";
+  font-family: "Locomotive";
+  font-size: 150%;
+}
+
+li:not(:last-child)::after {
+  content: ",";
+}
+
+li:not(:last-child) {
+  margin-inline-end: var(--1);
+}
+
+.c_logo {
+  grid-column: 1 / 3;
+
+  &.u_no_hover:hover {
+    text-decoration: none;
+  }
+}
+
+.c_menu {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--5);
+
+  padding-inline: var(--10);
+
+  height: var(--16);
+  align-items: center;
+
+  color: var(--color-white);
+  mix-blend-mode: difference;
+}
+
+/* #endregion = COMPONENTS */
+
+/* #region = OBJECTS */
+
+.o_links {
+  grid-column: 7 / 10;
+}
+
+.o_links ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.o_link_talk {
+  grid-column: 11 / -1;
+  justify-self: end;
+}
+
+/* #endregion = OBJECTS */
+
+

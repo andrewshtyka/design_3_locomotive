@@ -1,0 +1,19 @@
+/* #region = COMPONENTS */
+
+.c_container {
+  height: calc(min(1vh * 100, 80vw));
+  background-color: darkblue;
+
+  display: flex;
+  align-items: flex-end;
+  padding-inline: var(--10);
+  padding-block-end: var(--8);
+
+  color: var(--color-white);
+}
+
+.c_heading {
+  mix-blend-mode: difference;
+}
+
+/* #endregion = COMPONENTS */

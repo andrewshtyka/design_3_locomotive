@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("../Assets/Fonts/Helvetica\ Now\ Display\ Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Locomotive";
+  src: url("../Assets/Fonts/Locomotive\ Light\ Font.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: "Helvetica Now", sans-serif;
+  font-size: calc(var(--7) + var(--0_5));
+  line-height: 120%;
+
+  /* overflow-wrap: break-word; */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.f_decor {
+  font-family: 'Locomotive', serif;
+  font-size: calc(var(--16) + var(--4));
+  line-height: 110%;
+}

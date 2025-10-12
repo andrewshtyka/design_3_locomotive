@@ -1,0 +1,10 @@
+.c_link {
+	font-kerning: none;
+}
+
+.c_link:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: var(--0_5);
+	text-underline-offset: calc(var(--0_5) + var(--px));
+}
