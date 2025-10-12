@@ -1,10 +1,13 @@
 import Dynasty from "../Dynasty/Dynasty";
+import Featured from "../Featured/Featured";
+
 import css from "./MainSection.module.css";
 
 export default function MainSection() {
-  return (
-		<div className={css.o_container}>
+	return (
+		<section className={css.o_container}>
 			<Dynasty />
-		</div>
+			<Featured />
+		</section>
 	);
 }

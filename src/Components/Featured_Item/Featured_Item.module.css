@@ -1,0 +1,72 @@
+/* #region = COMPONENTS */
+
+.c_item {
+	position: relative;
+	border-top: var(--0_5) solid var(--color-black);
+	padding-block: var(--1_5);
+}
+
+.c_item_last {
+	position: relative;
+	border-top: var(--0_5) solid var(--color-black);
+	border-bottom: var(--0_5) solid var(--color-black);
+	padding-block: var(--1_5);
+}
+
+.c_link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+
+.c_image {
+	display: flex;
+	height: 7.5vw;
+	object-fit: cover;
+}
+
+/* #endregion = COMPONENTS */
+
+/* #region = OBJECT */
+
+.o_title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.o_item_name {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	margin: 0;
+	padding: 0;
+	width: var(--px);
+	height: var(--px);
+	border: 0;
+}
+
+.o_image_wrapper {
+	display: flex;
+	align-items: center;
+	/* width: 0; */
+}
+
+.o_title_name {
+	display: flex;
+	align-items: center;
+	padding-block-start: var(--4);
+
+	&:nth-of-type(1) {
+		padding-inline-end: var(--2_5);
+	}
+
+	&:nth-of-type(2) {
+		padding-inline-start: var(--2_5);
+	}
+}
+
+/* #endregion = OBJECT */

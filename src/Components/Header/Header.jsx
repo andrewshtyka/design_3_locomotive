@@ -12,16 +12,16 @@ export default function Header() {
 
 			<nav className={css.o_links}>
 				<ul>
-					<li>
+					<li className={css.o_link_item}>
 						<LinkCustom linkURL="#">Work</LinkCustom>
 					</li>
-					<li>
+					<li className={css.o_link_item}>
 						<LinkCustom linkURL="#">Agency</LinkCustom>
 					</li>
-					<li>
+					<li className={css.o_link_item}>
 						<LinkCustom linkURL="#">Careers</LinkCustom>
 					</li>
-					<li>
+					<li className={css.o_link_item}>
 						<LinkCustom linkURL="#">Store</LinkCustom>
 					</li>
 				</ul>

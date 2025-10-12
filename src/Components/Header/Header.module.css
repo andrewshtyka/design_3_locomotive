@@ -11,11 +11,11 @@
 	font-size: 150%;
 }
 
-li:not(:last-child)::after {
+.o_link_item:not(:last-child)::after {
 	content: ",";
 }
 
-li:not(:last-child) {
+.o_link_item:not(:last-child) {
 	margin-inline-end: var(--1);
 }
 

@@ -27,3 +27,9 @@ body {
   font-size: calc(var(--16) + var(--4));
   line-height: 110%;
 }
+
+.f_project_title {
+  font-family: 'Locomotive', serif;
+  font-size: 7.5vw;
+  line-height: 120%;
+}
