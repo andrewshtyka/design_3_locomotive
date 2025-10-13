@@ -38,6 +38,26 @@
 	justify-content: center;
 }
 
+.o_title_final {
+	position: relative;
+}
+
+.o_title_final::before {
+	content: "🕳";
+	font-size: 50%;
+	position: absolute;
+	top: calc(1.2vw * -1);
+	right: 100%;
+}
+
+.o_title_final::after {
+	content: "🔺";
+	font-size: 50%;
+	position: absolute;
+	top: calc(1.2vw * -1);
+	left: 100%;
+}
+
 .o_item_name {
 	position: absolute;
 	overflow: hidden;

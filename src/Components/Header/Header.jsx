@@ -1,5 +1,5 @@
 import css from "./Header.module.css";
-import LinkCustom from "../LinkCustom/LinkCustom";
+import { LinkCustom } from "../LinkCustom/LinkCustom";
 
 export default function Header() {
 	return (

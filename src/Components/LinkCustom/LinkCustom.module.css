@@ -1,3 +1,5 @@
+/* ========== LinkCustom ========== */
+
 .c_link {
 	font-kerning: none;
 }
@@ -7,4 +9,43 @@
 	text-decoration: underline;
 	text-decoration-thickness: var(--0_5);
 	text-underline-offset: calc(var(--0_5) + var(--px));
+}
+
+/* ========== LinkCustomLine ========== */
+
+.c_link_area {
+	position: relative;
+	border-top: var(--0_5) solid var(--color-black);
+}
+
+.c_link_line {
+	padding-block-start: var(--2);
+	display: inline-block;
+	width: 100%;
+}
+
+.c_link_line[data-icon]::after {
+	content: attr(data-icon);
+	position: absolute;
+	right: 0;
+	font-size: 75%;
+}
+
+/* ========== LinkList ========== */
+
+.o_link_list {
+	display: flex;
+	width: 100%;
+
+	padding-inline-end: var(--12);
+	padding-block: var(--2);
+
+	position: relative;
+}
+
+.o_link_list[data-icon]:hover::after {
+	content: attr(data-icon);
+	position: absolute;
+	right: 0;
+	font-size: 75%;
 }

@@ -26,7 +26,7 @@ export function Featured_All() {
 			<h3 className={css.o_item_name}>All Work</h3>
 
 			<div aria-hidden="true" className={css.o_title}>
-				<span className={`f_project_title ${css.o_title_name}`}>All Work</span>
+				<span className={`f_project_title ${css.o_title_name} ${css.o_title_final}`}>All Work</span>
 			</div>
 
 			<a href="#" className={css.c_link}>

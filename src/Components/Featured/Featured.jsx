@@ -4,7 +4,7 @@ import css from "./Featured.module.css";
 
 export default function Featured() {
 	return (
-		<section>
+		<div>
 			<h2 className={css.o_title}>Featured work</h2>
 			<ul>
 				<Featured_Item
@@ -36,6 +36,6 @@ export default function Featured() {
 				/>
 				<Featured_All />
 			</ul>
-		</section>
+		</div>
 	);
 }

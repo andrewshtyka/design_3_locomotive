@@ -14,13 +14,9 @@
 }
 
 .c_link_area {
-	position: relative;
-	border-top: var(--0_5) solid var(--color-black);
-
 	grid-column: 3 / 4;
 	grid-row: 4 / 5;
-  align-self: flex-end;
-
+	align-self: flex-end;
 }
 
 /* #endregion = COMPONENTS */
@@ -57,7 +53,7 @@
 
 .o_canvas_area {
 	aspect-ratio: 5 / 7;
-	width: 28rem;
+	width: 100%;
 	background-color: var(--color-black);
 
 	grid-column: 2 / 3;
@@ -70,6 +66,7 @@
 	grid-template-rows: repeat(4, auto);
 	column-gap: var(--5);
 	row-gap: var(--4);
+	width: 100%;
 }
 
 .o_canvas_wrapper span:nth-of-type(1) {
