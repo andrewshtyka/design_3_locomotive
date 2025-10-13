@@ -30,3 +30,11 @@ export function LinkList({ linkURL, className, children }) {
 		</a>
 	);
 }
+
+export function LinkNoUnderline({ linkURL, className, children }) {
+	return (
+		<a href={linkURL} className={`${className ? className : ""}`}>
+			{children}
+		</a>
+	);
+}

@@ -28,7 +28,7 @@
 .o_section {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-  column-gap: var(--5);
+	column-gap: var(--5);
 
 	border-top: var(--0_5) solid var(--color-black);
 }
@@ -36,7 +36,6 @@
 .o_section_title {
 	grid-column: 1 / 3;
 	padding-block-start: var(--2);
-
 }
 
 .o_list {
