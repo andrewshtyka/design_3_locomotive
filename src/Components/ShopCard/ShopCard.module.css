@@ -8,9 +8,9 @@
 	position: relative;
 	height: fit-content;
 
-  display: flex;
-  flex-direction: column;
-  gap: var(--2);
+	display: flex;
+	flex-direction: column;
+	gap: var(--2);
 }
 
 .o_image_wrapper {
@@ -30,7 +30,7 @@
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-rows: repeat(2, auto);
-  gap: var(--1);
+	gap: var(--1);
 }
 
 .o_name {
