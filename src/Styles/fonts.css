@@ -28,6 +28,10 @@ body {
 	@media (width <= 1600px) {
 		font-size: calc(var(--6) + var(--0_5));
 	}
+
+	@media (width <= 1024px) {
+		font-size: var(--6);
+	}
 }
 
 .f_decor {
@@ -45,6 +49,10 @@ body {
 
 	@media (width <= 1600px) {
 		font-size: calc(var(--16) + var(--2));
+	}
+
+	@media (width <= 1024px) {
+		font-size: calc(var(--12) + var(--0_5));
 	}
 }
 

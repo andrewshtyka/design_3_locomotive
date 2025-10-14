@@ -9,7 +9,7 @@ export function Extras({ className }) {
 				<h2 className={`f_decor`}>(13)</h2>
 			</div>
 
-			<div className={css.o_section}>
+			<div className={css.c_section}>
 				<h3 className={css.o_section_title}>Articles</h3>
 				<ul className={css.o_list}>
 					<li className={css.c_list_item}>
@@ -33,7 +33,7 @@ export function Extras({ className }) {
 				</ul>
 			</div>
 
-			<div className={css.o_section}>
+			<div className={css.c_section}>
 				<h3 className={css.o_section_title}>Culture</h3>
 				<ul className={css.o_list}>
 					<li className={css.c_list_item}>
@@ -57,7 +57,7 @@ export function Extras({ className }) {
 				</ul>
 			</div>
 
-			<div className={css.o_section}>
+			<div className={css.c_section}>
 				<h3 className={css.o_section_title}>Store</h3>
 				<ul className={css.o_list}>
 					<li className={css.c_list_item}>

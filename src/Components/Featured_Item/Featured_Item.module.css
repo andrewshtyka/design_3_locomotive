@@ -12,6 +12,10 @@
 	@media (width <= 1600px) {
 		padding-block: var(--4);
 	}
+
+	@media (width <= 1024px) {
+		border-top: var(--px) solid var(--color-black);
+	}
 }
 
 .c_item_last {
@@ -19,6 +23,11 @@
 	border-top: var(--0_5) solid var(--color-black);
 	border-bottom: var(--0_5) solid var(--color-black);
 	padding-block: var(--1_5);
+
+	@media (width <= 1024px) {
+		border-top: var(--px) solid var(--color-black);
+		border-bottom: var(--px) solid var(--color-black);
+	}
 }
 
 .c_link {

@@ -46,6 +46,10 @@
 	@media (width <= 2000px) {
 		height: var(--16);
 	}
+
+	@media (width <= 1024px) {
+		height: calc(var(--14) + var(--1));
+	}
 }
 
 /* #endregion = COMPONENTS */

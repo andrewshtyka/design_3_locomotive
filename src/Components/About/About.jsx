@@ -12,7 +12,7 @@ export default function About({ className }) {
 			<div className={css.o_details}>
 				<div className={css.c_visual}></div>
 				<div className={css.o_description}>
-					<p className={css.o_text_secr}>
+					<p className={css.o_text_sec}>
 						From strategy to deployment and maintenance, we're the ultimate digital one-stop shop. Over the past 15
 						years, Locomotive® has become a go-to for meaningful, innovative, results-driven digital experiences, web
 						design and branding. Freshness guaranteed.

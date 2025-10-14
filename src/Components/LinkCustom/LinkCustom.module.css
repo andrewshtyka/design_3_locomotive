@@ -9,6 +9,10 @@
 	text-decoration: underline;
 	text-decoration-thickness: var(--0_5);
 	text-underline-offset: calc(var(--0_5) + var(--px));
+
+	@media (width <= 1024px) {
+		text-decoration-thickness: var(--px);
+	}
 }
 
 /* ========== LinkCustomLine ========== */
@@ -16,6 +20,10 @@
 .c_link_area {
 	position: relative;
 	border-top: var(--0_5) solid var(--color-black);
+
+	@media (width <= 1024px) {
+		border-top: var(--px) solid var(--color-black);
+	}
 }
 
 .c_link_line {
