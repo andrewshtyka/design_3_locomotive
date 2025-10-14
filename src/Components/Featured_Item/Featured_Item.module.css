@@ -57,8 +57,12 @@
 
 .c_image {
 	display: flex;
-	height: var(--10);
+	height: 7.5vw;
 	object-fit: cover;
+
+	@media (width <= 700px) {
+		height: var(--10);
+	}
 }
 
 /* #endregion = COMPONENTS */
