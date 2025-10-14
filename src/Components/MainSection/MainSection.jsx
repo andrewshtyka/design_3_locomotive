@@ -4,6 +4,7 @@ import About from "../About/About";
 import { Extras } from "../Extras/Extras";
 import { Shop } from "../Shop/Shop";
 import { Footer } from "../Footer/Footer";
+import { FooterAddress } from "../FooterAddress/FooterAddress";
 
 import css from "./MainSection.module.css";
 
@@ -16,6 +17,7 @@ export default function MainSection() {
 			<Extras />
 			<Shop />
 			<Footer />
+			<FooterAddress />
 		</section>
 	);
 }

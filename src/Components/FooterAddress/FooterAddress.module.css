@@ -1,0 +1,29 @@
+/* #region = COMPONENTS */
+
+.c_link:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: var(--0_5);
+	text-underline-offset: var(--2);
+}
+
+/* #endregion = COMPONENTS */
+
+/* #region = OBJECT */
+
+.o_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-block-end: var(--6);
+}
+
+.o_email_shift {
+	margin-inline-start: var(--4);
+}
+
+/* #endregion = OBJECT */
+
+/* #region = UTILITIES */
+
+/* #endregion = UTILITIES */

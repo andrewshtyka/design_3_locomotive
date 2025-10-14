@@ -4,7 +4,7 @@ import css from "./Footer.module.css";
 export function Footer() {
 	return (
 		<footer className={css.o_container}>
-			<div className={css.o_container_menu}>
+			<nav className={css.o_container_menu}>
 				<h2 className={css.o_title}>Menu</h2>
 				<div className={css.c_double_col}>
 					<ul>
@@ -37,9 +37,9 @@ export function Footer() {
 						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 
-			<div className={css.o_container_social}>
+			<nav className={css.o_container_social}>
 				<h2 className={css.o_title}>Social</h2>
 				<div className={css.c_single_col}>
 					<ul>
@@ -60,9 +60,9 @@ export function Footer() {
 						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 
-			<div className={css.o_container_external}>
+			<nav className={css.o_container_external}>
 				<h2 className={css.o_title}>External</h2>
 				<div className={css.c_single_col}>
 					<ul>
@@ -83,7 +83,7 @@ export function Footer() {
 						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 		</footer>
 	);
 }
