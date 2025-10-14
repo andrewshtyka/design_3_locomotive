@@ -22,6 +22,18 @@
 	height: 100%;
 }
 
+.o_card:hover .o_name,
+.o_card:hover .o_button,
+.o_card:hover .o_price {
+	text-decoration: underline;
+	text-decoration-thickness: var(--0_5);
+	text-underline-offset: calc(var(--0_5) + var(--px));
+
+	@media (width <= 1024px) {
+		text-decoration-thickness: var(--px);
+	}
+}
+
 .o_details {
 	display: grid;
 	grid-template-columns: 1fr auto;

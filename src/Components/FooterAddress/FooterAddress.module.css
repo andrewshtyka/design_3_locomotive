@@ -5,6 +5,12 @@
 	text-decoration: underline;
 	text-decoration-thickness: var(--0_5);
 	text-underline-offset: var(--2);
+
+	@media (width <= 1024px) {
+		text-decoration-thickness: var(--px);
+	text-underline-offset: var(--1_5);
+
+	}
 }
 
 /* #endregion = COMPONENTS */
