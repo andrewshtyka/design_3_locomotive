@@ -1,8 +1,8 @@
 import css from "./FooterAddress.module.css";
 
-export function FooterAddress() {
+export function FooterAddress({ className }) {
 	return (
-		<div className={css.o_container}>
+		<div className={`${css.o_container} ${className ? " " + className : ""}`}>
 			<div className="f_decor">
 				<address>
 					<a className={css.c_link} href="#">

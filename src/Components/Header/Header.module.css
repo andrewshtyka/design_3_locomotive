@@ -32,8 +32,6 @@
 	grid-template-columns: repeat(12, 1fr);
 	gap: var(--5);
 
-	padding-inline: var(--14);
-
 	height: var(--20);
 	align-items: center;
 

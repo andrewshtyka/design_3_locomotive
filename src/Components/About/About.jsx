@@ -1,9 +1,9 @@
 import { LinkCustomLine } from "../LinkCustom/LinkCustom";
 import css from "./About.module.css";
 
-export default function About() {
+export default function About({ className }) {
 	return (
-		<div className={css.o_container}>
+		<section className={`${css.o_container} ${className ? " " + className : ""}`}>
 			<p className={`f_decor`}>
 				🔰Design and code are only tools of expression. What sets us and our work apart is people. We’re a small group
 				of creative thinkers who craft bespoke digital-first brand identities and experiences, tailor-made for you and
@@ -30,6 +30,6 @@ export default function About() {
 				<span className={css.o_text_top}>Always looking</span>
 				<span className={css.o_text_bottom}>for top shelf talent</span>
 			</div>
-		</div>
+		</section>
 	);
 }

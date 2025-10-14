@@ -1,9 +1,9 @@
 import css from "./Header.module.css";
 import { LinkCustom } from "../LinkCustom/LinkCustom";
 
-export default function Header() {
+export default function Header({ className }) {
 	return (
-		<div className={css.c_menu}>
+		<div className={`${css.c_menu} ${className ? " " + className : ""}`}>
 			<LinkCustom linkURL="#" className={`${css.c_logo} u_no_hover`}>
 				<span>Locomotive</span>
 				&reg;

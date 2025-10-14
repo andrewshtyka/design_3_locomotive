@@ -1,0 +1,4 @@
+.o_container {
+	/* width: 100%; */
+	padding-inline: var(--14);
+}

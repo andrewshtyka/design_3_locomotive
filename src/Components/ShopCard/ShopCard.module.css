@@ -13,10 +13,6 @@
 	gap: var(--2);
 }
 
-.o_image_wrapper {
-	background-color: red;
-}
-
 .o_link {
 	cursor: pointer;
 	position: absolute;

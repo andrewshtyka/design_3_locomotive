@@ -2,9 +2,9 @@ import { Featured_Item, Featured_All } from "../Featured_Item/Featured_Item";
 
 import css from "./Featured.module.css";
 
-export default function Featured() {
+export default function Featured({ className }) {
 	return (
-		<div>
+		<section className={`${className} && ${className}}`}>
 			<h2 className={css.o_title}>Featured work</h2>
 			<ul>
 				<Featured_Item
@@ -36,6 +36,6 @@ export default function Featured() {
 				/>
 				<Featured_All />
 			</ul>
-		</div>
+		</section>
 	);
 }

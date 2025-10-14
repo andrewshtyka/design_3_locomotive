@@ -1,9 +1,9 @@
 import { LinkList } from "../LinkCustom/LinkCustom";
 import css from "./Extras.module.css";
 
-export function Extras() {
+export function Extras({ className }) {
 	return (
-		<>
+		<section className={`${className} && ${className}`}>
 			<div className={css.o_container_title}>
 				<h2 className={`f_decor`}>Extras</h2>
 				<h2 className={`f_decor`}>(13)</h2>
@@ -65,6 +65,6 @@ export function Extras() {
 					</li>
 				</ul>
 			</div>
-		</>
+		</section>
 	);
 }

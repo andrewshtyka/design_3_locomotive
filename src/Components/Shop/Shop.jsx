@@ -1,9 +1,9 @@
 import { ShopCard } from "../ShopCard/ShopCard";
 import css from "./Shop.module.css";
 
-export function Shop() {
+export function Shop({ className }) {
 	return (
-		<div className={css.o_container}>
+		<section className={`${css.o_container} ${className ? " " + className : ""}`}>
 			<ShopCard
 				className={css.c_card_1}
 				src="https://locomotive.ca/assets/images/temp/pros-de-linternet-white-t-shirt.jpg"
@@ -20,6 +20,6 @@ export function Shop() {
 				product_name="Pros de l'internet Sand Hat"
 				product_price="25 USD"
 			/>
-		</div>
+		</section>
 	);
 }

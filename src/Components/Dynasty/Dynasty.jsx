@@ -1,9 +1,9 @@
 import { LinkCustomLine } from "../LinkCustom/LinkCustom";
 import css from "./Dynasty.module.css";
 
-export default function Dynasty() {
+export default function Dynasty({ className }) {
 	return (
-		<div className={css.o_container}>
+		<section className={`${css.o_container} ${className ? " " + className : ""}`}>
 			<div className={css.o_years}>
 				<span>&copy;2008-2025</span>
 			</div>
@@ -19,6 +19,6 @@ export default function Dynasty() {
 					</LinkCustomLine>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

@@ -1,9 +1,9 @@
 import { LinkCustom, LinkNoUnderline } from "../LinkCustom/LinkCustom";
 import css from "./Footer.module.css";
 
-export function Footer() {
+export function Footer({ className }) {
 	return (
-		<footer className={css.o_container}>
+		<footer className={`${css.o_container} ${className ? " " + className : ""}`}>
 			<nav className={css.o_container_menu}>
 				<h2 className={css.o_title}>Menu</h2>
 				<div className={css.c_double_col}>
