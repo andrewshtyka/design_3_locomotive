@@ -1,4 +1,11 @@
 .o_container {
-	/* width: 100%; */
 	padding-inline: var(--14);
+
+	@media (width <= 2400px) {
+		padding-inline: var(--12);
+	}
+
+	@media (width <= 1600px) {
+		padding-inline: var(--10);
+	}
 }

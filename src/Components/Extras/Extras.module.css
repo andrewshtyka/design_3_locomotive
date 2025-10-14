@@ -22,7 +22,19 @@
 .o_container_title {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: var(--9);
+	margin-bottom: var(--12);
+
+	@media (width <= 2400px) {
+		margin-bottom: var(--10);
+	}
+
+	@media (width <= 2000px) {
+		margin-bottom: var(--9);
+	}
+
+	@media (width <= 1600px) {
+		margin-bottom: var(--8);
+	}
 }
 
 .o_section {

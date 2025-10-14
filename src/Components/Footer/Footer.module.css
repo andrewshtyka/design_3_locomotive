@@ -27,6 +27,18 @@
 	column-gap: var(--5);
 
 	padding-block-end: var(--60);
+
+	@media (width <= 2400px) {
+		padding-block-end: var(--56);
+	}
+
+	@media (width <= 2000px) {
+		padding-block-end: var(--52);
+	}
+
+	@media (width <= 1600px) {
+		padding-block-end: calc(var(--44) + var(--2));
+	}
 }
 
 .o_container_menu {

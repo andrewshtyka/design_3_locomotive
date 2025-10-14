@@ -32,11 +32,20 @@
 	grid-template-columns: repeat(12, 1fr);
 	gap: var(--5);
 
-	height: var(--20);
 	align-items: center;
 
 	color: var(--color-white);
 	mix-blend-mode: difference;
+
+	height: var(--20);
+
+	@media (width <= 2400px) {
+		height: calc(var(--16) + var(--2));
+	}
+
+	@media (width <= 2000px) {
+		height: var(--16);
+	}
 }
 
 /* #endregion = COMPONENTS */

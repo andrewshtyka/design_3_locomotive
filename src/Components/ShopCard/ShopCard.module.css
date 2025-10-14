@@ -26,7 +26,8 @@
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-rows: repeat(2, auto);
-	gap: var(--1);
+	row-gap: var(--1);
+	column-gap: var(--8);
 }
 
 .o_name {

@@ -30,10 +30,25 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(2, auto);
 
-	row-gap: var(--28);
+	row-gap: var(--40);
 	column-gap: var(--5);
 
-	padding-block-end: var(--40);
+	padding-block-end: var(--56);
+
+	@media (width <= 2400px) {
+		row-gap: var(--36);
+		padding-block-end: var(--52);
+	}
+
+	@media (width <= 2000px) {
+		row-gap: var(--32);
+		padding-block-end: var(--44);
+	}
+
+	@media (width <= 1600px) {
+		row-gap: calc(var(--28) + var(--2));
+		padding-block-end: var(--40);
+	}
 }
 
 .o_years {

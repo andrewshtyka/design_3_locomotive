@@ -16,13 +16,36 @@ body {
 	font-family: "Helvetica Now", sans-serif;
 	font-size: var(--9);
 	line-height: 120%;
+
+	@media (width <= 2400px) {
+		font-size: var(--8);
+	}
+
+	@media (width <= 2000px) {
+		font-size: calc(var(--7) + var(--0_5));
+	}
+
+	@media (width <= 1600px) {
+		font-size: calc(var(--6) + var(--0_5));
+	}
 }
 
 .f_decor {
 	font-family: "Locomotive", serif;
 	font-size: var(--24);
-
 	line-height: 110%;
+
+	@media (width <= 2400px) {
+		font-size: calc(var(--20) + var(--2));
+	}
+
+	@media (width <= 2000px) {
+		font-size: var(--20);
+	}
+
+	@media (width <= 1600px) {
+		font-size: calc(var(--16) + var(--2));
+	}
 }
 
 .f_project_title {
@@ -32,9 +55,10 @@ body {
 }
 
 /* breakpoints */
-/* 2400 */
-/* 2000 */
-/* 1600 */
-/* tablet > 1024 > desktop */
-/* 700 */
-/* 380 */
+/* ✅ 2400+ */
+/* ✅ -2400 */
+/* ✅ -2000 */
+/* ✅ -1600 */
+/* -1024 -> desktop */
+/* -700 */
+/* -380 */

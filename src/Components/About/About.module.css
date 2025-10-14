@@ -14,10 +14,23 @@
 /* #region = OBJECT */
 
 .o_container {
-	padding-block: var(--9) var(--44);
 	display: flex;
 	flex-direction: column;
 	gap: var(--5);
+
+	padding-block: var(--12) var(--56);
+
+	@media (width <= 2400px) {
+		padding-block: var(--10) var(--52);
+	}
+
+	@media (width <= 2000px) {
+		padding-block: var(--9) calc(var(--44) + var(--1));
+	}
+
+	@media (width <= 1600px) {
+		padding-block: var(--8) var(--40);
+	}
 }
 
 .o_details {
@@ -49,7 +62,7 @@
 
 	row-gap: var(--12);
 
-  height: fit-content;
+	height: fit-content;
 }
 
 .o_text_secr {

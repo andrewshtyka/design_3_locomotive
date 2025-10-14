@@ -15,7 +15,20 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	padding-block-end: var(--6);
+
+	padding-block-end: var(--8);
+
+	@media (width <=2400px) {
+		padding-block-end: var(--7);
+	}
+
+	@media (width <=2000px) {
+		padding-block-end: var(--6);
+	}
+
+	@media (width <=1600px) {
+		padding-block-end: var(--5);
+	}
 }
 
 .o_email_shift {
@@ -23,7 +36,3 @@
 }
 
 /* #endregion = OBJECT */
-
-/* #region = UTILITIES */
-
-/* #endregion = UTILITIES */
