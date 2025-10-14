@@ -9,31 +9,47 @@ export function Footer({ className }) {
 				<div className={css.c_double_col}>
 					<ul>
 						<li>
-							<LinkCustom linkURL="#">Work</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Work
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Agency</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Agency
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Careers</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Careers
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Let's talk</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Let's talk
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Privacy</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Privacy
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Français</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Français
+							</LinkCustom>
 						</li>
 					</ul>
 
 					<ul>
 						<li>
-							<LinkNoUnderline linkURL="#">Cookie preferences</LinkNoUnderline>
+							<LinkNoUnderline linkURL="#" className="u_kerning_normal">
+								Cookie preferences
+							</LinkNoUnderline>
 						</li>
 						<li>
-							<LinkNoUnderline linkURL="#">Newsletter ↓</LinkNoUnderline>
+							<LinkNoUnderline linkURL="#" className="u_kerning_normal">
+								Newsletter ↓
+							</LinkNoUnderline>
 						</li>
 					</ul>
 				</div>
@@ -44,19 +60,29 @@ export function Footer({ className }) {
 				<div className={css.c_single_col}>
 					<ul>
 						<li>
-							<LinkCustom linkURL="#">Instagram</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Instagram
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Twitter</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Twitter
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">LinkedIn</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								LinkedIn
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Behance</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Behance
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">GitHub</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								GitHub
+							</LinkCustom>
 						</li>
 					</ul>
 				</div>
@@ -67,23 +93,54 @@ export function Footer({ className }) {
 				<div className={css.c_single_col}>
 					<ul>
 						<li>
-							<LinkCustom linkURL="#">Store</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Store
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Locomotive Scroll</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Locomotive Scroll
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Charcoal CMS</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Charcoal CMS
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Annual trips</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Annual trips
+							</LinkCustom>
 						</li>
 						<li>
-							<LinkCustom linkURL="#">Dynasty</LinkCustom>
+							<LinkCustom linkURL="#" className="u_kerning_normal">
+								Dynasty
+							</LinkCustom>
 						</li>
 					</ul>
 				</div>
 			</nav>
+
+			<ul className={css.c_lang}>
+				<li>
+					<LinkCustom linkURL="#" className="u_kerning_normal">
+						Français
+					</LinkCustom>
+				</li>
+			</ul>
+
+			<ul className={css.c_extra}>
+				<li>
+					<LinkNoUnderline linkURL="#" className="u_kerning_normal">
+						Cookie preferences
+					</LinkNoUnderline>
+				</li>
+				<li>
+					<LinkNoUnderline linkURL="#" className="u_kerning_normal">
+						Newsletter ↓
+					</LinkNoUnderline>
+				</li>
+			</ul>
 		</footer>
 	);
 }

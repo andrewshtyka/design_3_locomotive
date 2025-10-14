@@ -25,6 +25,11 @@
 	@media (width <= 1024px) {
 		padding-block-end: var(--7);
 	}
+
+	@media (width <= 700px) {
+		height: 100svh;
+		padding-block-end: var(--8);
+	}
 }
 
 .c_heading {

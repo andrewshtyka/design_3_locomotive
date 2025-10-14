@@ -32,6 +32,10 @@ body {
 	@media (width <= 1024px) {
 		font-size: var(--6);
 	}
+
+	@media (width <= 700px) {
+		font-size: calc(var(--4) + var(--0_5));
+	}
 }
 
 .f_decor {
@@ -54,19 +58,18 @@ body {
 	@media (width <= 1024px) {
 		font-size: calc(var(--12) + var(--0_5));
 	}
+
+	@media (width <= 700px) {
+		font-size: var(--9);
+	}
 }
 
 .f_project_title {
 	font-family: "Locomotive", serif;
 	font-size: 7.5vw;
 	line-height: 105%;
-}
 
-/* breakpoints */
-/* ✅ 2400+ */
-/* ✅ -2400 */
-/* ✅ -2000 */
-/* ✅ -1600 */
-/* -1024 -> desktop */
-/* -700 */
-/* -380 */
+	@media (width <= 700px) {
+		font-size: var(--10);
+	}
+}

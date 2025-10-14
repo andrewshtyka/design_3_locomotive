@@ -9,19 +9,20 @@ export default function About({ className }) {
 				of creative thinkers who craft bespoke digital-first brand identities and experiences, tailor-made for you and
 				your audience.🔛🔜
 			</p>
+
 			<div className={css.o_details}>
 				<div className={css.c_visual}></div>
 				<div className={css.o_description}>
-					<p className={css.o_text_sec}>
+					<p className={css.o_text_section}>
 						From strategy to deployment and maintenance, we're the ultimate digital one-stop shop. Over the past 15
 						years, Locomotive® has become a go-to for meaningful, innovative, results-driven digital experiences, web
 						design and branding. Freshness guaranteed.
 					</p>
 					<div className={css.o_links}>
-						<LinkCustomLine linkURL="#" className_1={css.c_link_area}>
+						<LinkCustomLine linkURL="#" className_1={`${css.c_link_area} u_kerning_normal`}>
 							Agency
 						</LinkCustomLine>
-						<LinkCustomLine linkURL="#" className_1={css.c_link_area}>
+						<LinkCustomLine linkURL="#" className_1={`${css.c_link_area} u_kerning_normal`}>
 							Careers
 						</LinkCustomLine>
 					</div>

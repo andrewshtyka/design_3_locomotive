@@ -13,6 +13,10 @@
 	@media (width <= 1024px) {
 		text-decoration-thickness: var(--px);
 	}
+
+	@media (width <= 700px) {
+		text-underline-offset: var(--px);
+	}
 }
 
 /* ========== LinkCustomLine ========== */

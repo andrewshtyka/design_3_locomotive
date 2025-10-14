@@ -32,7 +32,7 @@ export default function Dynasty({ className }) {
 						</p>
 					)}
 					<div className={css.o_canvas_area}></div>
-					<LinkCustomLine linkURL="#" className_1={css.c_link_area}>
+					<LinkCustomLine linkURL="#" className_1={`${css.c_link_area} u_kerning_normal`}>
 						The dynasty
 					</LinkCustomLine>
 				</div>

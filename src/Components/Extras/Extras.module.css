@@ -27,6 +27,14 @@
 		border-top: var(--px) solid var(--color-black);
 		row-gap: var(--8);
 	}
+
+	@media (width <= 700px) {
+		row-gap: var(--3);
+
+		&:not(:first-of-type) {
+			padding-block-end: var(--10);
+		}
+	}
 }
 
 /* #endregion = COMPONENTS */

@@ -27,7 +27,7 @@
 	grid-template-columns: 1fr auto;
 	grid-template-rows: repeat(2, auto);
 	row-gap: var(--1);
-	column-gap: var(--8);
+	column-gap: var(--4);
 }
 
 .o_name {
@@ -43,6 +43,10 @@
 .o_button {
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
+
+	@media (width <= 700px) {
+		display: none;
+	}
 }
 
 /* #endregion = OBJECT */

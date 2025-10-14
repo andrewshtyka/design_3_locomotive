@@ -1,8 +1,20 @@
 /* #region = COMPONENTS */
 
 .c_icon {
-	grid-column: 3 / 4;
+	grid-column: 3 / 5;
 	height: var(--2);
+
+	@media (width <= 1024px) {
+		grid-column: 4 / 6;
+	}
+
+	@media (width <= 700px) {
+		grid-column: 6 / 8;
+	}
+
+		@media (width <= 380px) {
+		grid-column: 7 / 9;
+	}
 }
 
 .c_icon::after {
@@ -72,3 +84,23 @@
 }
 
 /* #endregion = OBJECTS */
+
+/* #region = UTILITIES */
+
+.u_display_none {
+	display: inline;
+
+	@media (width <= 1024px) {
+		display: none;
+	}
+}
+
+.u_display {
+	display: none;
+
+	@media (width <= 1024px) {
+		display: inline;
+	}
+}
+
+/* #endregion = UTILITIES */

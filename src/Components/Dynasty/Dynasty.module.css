@@ -61,6 +61,11 @@
 		row-gap: var(--14);
 		padding-block-end: calc(var(--24) + var(--2));
 	}
+
+	@media (width <= 700px) {
+		row-gap: var(--12);
+		padding-block-end: var(--20);
+	}
 }
 
 .o_years {
@@ -119,6 +124,10 @@
 
 	@media (width <= 1024px) {
 		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media (width <= 700px) {
+		column-gap: var(--2_5);
 	}
 }
 

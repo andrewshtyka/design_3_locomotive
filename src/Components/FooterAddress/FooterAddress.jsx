@@ -7,16 +7,16 @@ export function FooterAddress({ className }) {
 				<address className={`${css.f_custom} ${css.o_item_address}`}>
 					<a className={css.c_link} href="#">
 						<span aria-hidden="true">🟤</span>
-						<span className="u_screen_reader_text">&nbsp;</span>
 						1211
 						<span aria-hidden="true">🔠</span>
 						Jean-Talon Est
 						<span aria-hidden="true">🔚🔞</span>
-						<br />
+						<br className={css.u_display_none} />
 						Montréal
-						<span className="u_screen_reader_text">&nbsp;</span>
 						<span aria-hidden="true">🛑🚹🚺</span>
-						<span className="u_screen_reader_text">(QC)</span>, Canada
+						<span className="u_screen_reader_text">(QC)</span>,<span aria-hidden="true">&nbsp;</span>
+						<br className={css.u_display} />
+						Canada
 						<span aria-hidden="true">🦉</span>
 						H2R 1W1
 					</a>

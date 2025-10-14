@@ -29,4 +29,8 @@ html:focus-within {
 	border: 0;
 }
 
+.u_kerning_normal {
+	font-kerning: normal;
+}
+
 /* #endregion = UTILITIES */
