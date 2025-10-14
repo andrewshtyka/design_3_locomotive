@@ -72,13 +72,12 @@
 .o_image_wrapper {
 	display: flex;
 	align-items: center;
-	/* width: 0; */
 }
 
 .o_title_name {
 	display: flex;
 	align-items: center;
-	padding-block-start: var(--4);
+	padding-block-start: var(--8);
 
 	&:nth-of-type(1) {
 		padding-inline-end: var(--2_5);

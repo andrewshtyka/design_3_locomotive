@@ -32,9 +32,9 @@
 	grid-template-columns: repeat(12, 1fr);
 	gap: var(--5);
 
-	padding-inline: var(--10);
+	padding-inline: var(--14);
 
-	height: var(--16);
+	height: var(--20);
 	align-items: center;
 
 	color: var(--color-white);

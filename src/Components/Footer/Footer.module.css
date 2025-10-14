@@ -4,16 +4,16 @@
 	border-top: var(--0_5) solid var(--color-black);
 	padding-block-start: var(--1);
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .c_single_col {
 	border-top: var(--0_5) solid var(--color-black);
 	padding-block-start: var(--1);
 
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* #endregion = COMPONENTS */
@@ -24,9 +24,9 @@
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-  column-gap: var(--5);
+	column-gap: var(--5);
 
-  padding-block-end: var(--52);
+	padding-block-end: var(--60);
 }
 
 .o_container_menu {
@@ -35,7 +35,6 @@
 
 o_container_social {
 	grid-column: 3 / 4;
-
 }
 
 .o_title {

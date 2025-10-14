@@ -14,7 +14,7 @@
 
 .o_container {
   padding-block-start: var(--24);
-  padding-block-end: var(--52);
+  padding-block-end: var(--60);
 
 
   display: grid;
