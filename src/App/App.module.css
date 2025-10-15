@@ -13,3 +13,7 @@
 		padding-inline: var(--5);
 	}
 }
+
+.u_bg_color_white {
+	background-color: var(--color-white);
+}

@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "Helvetica Now";
+	src: url("../Assets/Fonts/Helvetica\ Now\ Display\ Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Locomotive";
+	src: url("../Assets/Fonts/Locomotive\ Light\ Font.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -11,6 +25,77 @@ html {
 html:focus-within {
 	scroll-behavior: smooth;
 }
+
+body {
+	font-family: "Helvetica Now", sans-serif;
+	font-size: var(--9);
+	line-height: 120%;
+
+	@media (width <= 2400px) {
+		font-size: var(--8);
+	}
+
+	@media (width <= 2000px) {
+		font-size: calc(var(--7) + var(--0_5));
+	}
+
+	@media (width <= 1600px) {
+		font-size: calc(var(--6) + var(--0_5));
+	}
+
+	@media (width <= 1024px) {
+		font-size: var(--6);
+	}
+
+	@media (width <= 700px) {
+		font-size: calc(var(--4) + var(--0_5));
+	}
+}
+
+/* #region = COMPONENTS */
+
+.c_loader {
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100svh;
+	background-color: black;
+	color: white;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.c_loader_logo {
+	display: flex;
+	height: 2.25rem;
+	fill: white;
+
+	opacity: 0;
+	animation: fadeIn 1.5s cubic-bezier(0.215, 0.21, 0.355, 1) 0.5s forwards;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* #endregion = COMPONENTS */
 
 /* #region = UTILITIES */
 
@@ -43,7 +128,52 @@ html:focus-within {
 	color: var(--color-white);
 	mix-blend-mode: difference;
 	background-color: transparent;
-
 }
 
 /* #endregion = UTILITIES */
+
+/* #region = FONTS */
+
+.f_decor {
+	font-family: "Locomotive", serif;
+	font-size: var(--24);
+	line-height: 110%;
+
+	@media (width <= 2400px) {
+		font-size: calc(var(--20) + var(--2));
+	}
+
+	@media (width <= 2000px) {
+		font-size: var(--20);
+	}
+
+	@media (width <= 1600px) {
+		font-size: calc(var(--16) + var(--2));
+	}
+
+	@media (width <= 1024px) {
+		font-size: calc(var(--12) + var(--0_5));
+	}
+
+	@media (width <= 700px) {
+		font-size: var(--9);
+	}
+}
+
+.f_project_title {
+	font-family: "Locomotive", serif;
+	font-size: 7.5vw;
+	line-height: 105%;
+
+	@media (width <= 700px) {
+		font-size: var(--10);
+	}
+}
+
+.f_menu_mobile {
+	font-family: "Locomotive", serif;
+	font-size: min(12vw, calc(var(--16) + var(--2)));
+	line-height: 140%;
+}
+
+/* #endregion = FONTS */

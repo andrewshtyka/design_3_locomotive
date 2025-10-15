@@ -9,7 +9,8 @@ export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile,
 			${!bg && !isMenuOpen && "u_blend_difference"}`}
 			style={{
 				backgroundColor: bg && !isMenuOpen ? "var(--color-white)" : "transparent",
-				transition: bg && !isMenuOpen ? "background-color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)" : "background-color 0s",
+				transition:
+					bg && !isMenuOpen ? "background-color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)" : "background-color 0s",
 			}}
 		>
 			<LinkCustom linkURL="#" className={`${css.c_logo} u_no_hover u_kerning_normal`}>

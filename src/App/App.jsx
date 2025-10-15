@@ -14,6 +14,8 @@ import { FooterAddress } from "../Components/FooterAddress/FooterAddress";
 import css from "./App.module.css";
 
 export default function App() {
+	// ======================================================================
+	//
 	// MOB MENU: check if width is <= 1024 px. If not, then close the menu.
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
@@ -29,21 +31,42 @@ export default function App() {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
+	// ======================================================================
+	//
 	// HEADER BG COLOR: check if Hero is in viewport
 	const heroRef = useRef(null);
 	const [headerBg, setHeaderBg] = useState(false);
 
 	useEffect(() => {
 		if (!heroRef.current) return;
-		const observer = new IntersectionObserver(
-			([entry]) => setHeaderBg(!entry.isIntersecting),
-			{ threshold: 0 } // коли хоча б 1px Hero виходить з viewport
-		);
+		const observer = new IntersectionObserver(([entry]) => setHeaderBg(!entry.isIntersecting), { threshold: 0 });
 		observer.observe(heroRef.current);
 
 		return () => observer.disconnect();
 	}, [heroRef]);
 
+	// ======================================================================
+	//
+	// LOADER
+	useEffect(() => {
+		const loader = document.getElementById("loader");
+		if (!loader) return;
+
+		// 1. Гарантуємо, що він видимий
+		loader.style.opacity = "1";
+
+		// 2. Через 1 секунду починаємо зникати
+		setTimeout(() => {
+			loader.style.opacity = "0";
+
+			// 3. Після завершення transition видаляємо з DOM
+			setTimeout(() => loader.remove(), 900);
+		}, 2000);
+	}, []);
+
+	// ======================================================================
+	//
+	// MARKUP
 	return (
 		<div>
 			<Header
@@ -55,13 +78,13 @@ export default function App() {
 			/>
 			<Menu className={css.o_container} isMenuOpen={isMenuOpen} />
 			<Hero className={css.o_container} ref={heroRef} />
-			<Dynasty className={css.o_container} />
-			<Featured className={css.o_container} />
-			<About className={css.o_container} />
-			<Extras className={css.o_container} />
-			<Shop className={css.o_container} />
-			<Footer className={css.o_container} />
-			<FooterAddress className={css.o_container} />
+			<Dynasty className={`${css.o_container} ${css.u_bg_color_white}`} />
+			<Featured className={`${css.o_container} ${css.u_bg_color_white}`} />
+			<About className={`${css.o_container} ${css.u_bg_color_white}`} />
+			<Extras className={`${css.o_container} ${css.u_bg_color_white}`} />
+			<Shop className={`${css.o_container} ${css.u_bg_color_white}`} />
+			<Footer className={`${css.o_container} ${css.u_bg_color_white}`} />
+			<FooterAddress className={`${css.o_container} ${css.u_bg_color_white}`} />
 		</div>
 	);
 }
