@@ -70,29 +70,31 @@ body {
 	align-items: center;
 }
 
-.c_loader_logo {
-	display: flex;
+.c_loader_logo svg {
+	width: auto;
 	height: 2.25rem;
+	display: block;
 	fill: white;
+}
 
+.c_loader_logo {
 	opacity: 0;
 	animation: fadeIn 1.5s cubic-bezier(0.215, 0.21, 0.355, 1) 0.5s forwards;
 }
 
-
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 /* #endregion = COMPONENTS */

@@ -23,10 +23,14 @@ export default function App() {
 	useEffect(() => {
 		const handleResize = () => {
 			const nowMobile = window.innerWidth <= 1024;
-			setIsMobile(nowMobile);
-			if (!nowMobile) setIsMenuOpen(false);
+			setIsMobile((prev) => {
+				if (prev !== nowMobile) {
+					if (!nowMobile) setIsMenuOpen(false);
+					return nowMobile;
+				}
+				return prev;
+			});
 		};
-
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
@@ -62,14 +66,13 @@ export default function App() {
 			setTimeout(
 				() => {
 					loader.style.opacity = "0";
+					document.documentElement.style.backgroundColor = "";
 					setTimeout(() => loader.remove(), MIN_DISPLAY);
-					// loader.addEventListener("transitionend", () => loader.remove(), { once: true });
 				},
 				remaining > 0 ? remaining : 0
 			);
 		};
 
-		// Чекаємо повного завантаження сторінки
 		if (document.readyState === "complete") {
 			hideLoader();
 		} else {
