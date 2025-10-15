@@ -73,3 +73,9 @@ body {
 		font-size: var(--10);
 	}
 }
+
+.f_menu_mobile {
+	font-family: "Locomotive", serif;
+	font-size: min(12vw, calc(var(--16) + var(--2)));
+	line-height: 140%;
+}

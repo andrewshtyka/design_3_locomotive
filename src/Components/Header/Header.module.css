@@ -12,7 +12,7 @@
 		grid-column: 6 / 8;
 	}
 
-		@media (width <= 380px) {
+	@media (width <= 380px) {
 		grid-column: 7 / 9;
 	}
 }
@@ -38,7 +38,7 @@
 .c_menu {
 	position: fixed;
 	width: 100%;
-	z-index: 999;
+	z-index: 900;
 
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -47,7 +47,6 @@
 	align-items: center;
 
 	color: var(--color-white);
-	mix-blend-mode: difference;
 
 	height: var(--20);
 
@@ -102,5 +101,7 @@
 		display: inline;
 	}
 }
+
+
 
 /* #endregion = UTILITIES */

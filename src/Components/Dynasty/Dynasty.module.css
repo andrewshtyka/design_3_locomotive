@@ -64,6 +64,7 @@
 
 	@media (width <= 700px) {
 		row-gap: var(--12);
+		column-gap: var(--2_5);
 		padding-block-end: var(--20);
 	}
 }
@@ -88,6 +89,10 @@
 
 	@media (width <= 1024px) {
 		grid-column: 4 / 5;
+	}
+
+	@media (width <= 700px) {
+		grid-column: 3 / 5;
 	}
 }
 

@@ -33,4 +33,12 @@ html:focus-within {
 	font-kerning: normal;
 }
 
+.u_blend_normal {
+	mix-blend-mode: normal;
+}
+
+.u_blend_difference {
+	mix-blend-mode: difference;
+}
+
 /* #endregion = UTILITIES */
