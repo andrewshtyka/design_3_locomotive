@@ -1,19 +1,22 @@
 import { LinkCustom } from "../LinkCustom/LinkCustom";
 import css from "./Header.module.css";
 
-export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile }) {
+export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile, bg }) {
 	return (
 		<div
-			className={`${css.c_menu} ${className ? " " + className : ""} ${
-				isMenuOpen ? "u_blend_normal" : "u_blend_difference"
-			}`}
+			className={`${css.c_menu} ${className ? " " + className : ""}
+			${isMenuOpen && "u_blend_normal"}
+			${!bg && !isMenuOpen && "u_blend_difference"}`}
+			style={{
+				backgroundColor: bg && !isMenuOpen ? "var(--color-white)" : "transparent",
+				transition: bg && !isMenuOpen ? "background-color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)" : "background-color 0s",
+			}}
 		>
 			<LinkCustom linkURL="#" className={`${css.c_logo} u_no_hover u_kerning_normal`}>
 				<span>Locomotive</span>
 				&reg;
 			</LinkCustom>
 			<span className={css.c_icon}></span>
-
 			<nav className={`${css.o_links} ${css.u_display_none}`}>
 				<ul>
 					<li className={css.o_link_item}>

@@ -1,7 +1,7 @@
 ### TO DO
 
 1. ✅ Menu Mobile
-2. Menu Desktop (white bg)
+2. ✅ Menu Desktop (white bg)
 3. Loader
 4. Hover: links
 5. Hover: projects

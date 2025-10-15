@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import css from "./Hero.module.css";
 
-export default function Hero({ className }) {
+export const Hero = forwardRef(({ className }, ref) => {
 	return (
-		<section className={`${css.c_container} ${className ? " " + className : ""}`}>
+		<section ref={ref} className={`${css.c_container} ${className ? " " + className : ""}`}>
 			<h1 className={`f_decor ${css.c_heading}`}>
 				<span aria-hidden="true">🔶 </span>
 				Locomotive&reg;
@@ -11,4 +12,4 @@ export default function Hero({ className }) {
 			</h1>
 		</section>
 	);
-}
+});

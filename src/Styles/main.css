@@ -35,10 +35,15 @@ html:focus-within {
 
 .u_blend_normal {
 	mix-blend-mode: normal;
+	color: var(--color-white);
+	background-color: transparent;
 }
 
 .u_blend_difference {
+	color: var(--color-white);
 	mix-blend-mode: difference;
+	background-color: transparent;
+
 }
 
 /* #endregion = UTILITIES */
