@@ -48,21 +48,35 @@ export default function App() {
 	// ======================================================================
 	//
 	// LOADER
-	useEffect(() => {
-		const loader = document.getElementById("loader");
-		if (!loader) return;
+useEffect(() => {
+	const loader = document.getElementById("loader");
+	if (!loader) return;
 
-		// 1. Гарантуємо, що він видимий
-		loader.style.opacity = "1";
+	const MIN_DISPLAY = 1500; // мінімальний час лоадера в мс
+	const startTime = Date.now();
 
-		// 2. Через 1 секунду починаємо зникати
-		setTimeout(() => {
-			loader.style.opacity = "0";
+	const hideLoader = () => {
+		const elapsed = Date.now() - startTime;
+		const remaining = MIN_DISPLAY - elapsed;
 
-			// 3. Після завершення transition видаляємо з DOM
-			setTimeout(() => loader.remove(), 900);
-		}, 2000);
-	}, []);
+		setTimeout(
+			() => {
+				loader.style.opacity = "0";
+				setTimeout(() => loader.remove(), 900); // враховуємо transition
+			},
+			remaining > 0 ? remaining : 0
+		);
+	};
+
+	// Чекаємо повного завантаження сторінки
+	if (document.readyState === "complete") {
+		hideLoader();
+	} else {
+		window.addEventListener("load", hideLoader);
+	}
+
+	return () => window.removeEventListener("load", hideLoader);
+}, []);
 
 	// ======================================================================
 	//
