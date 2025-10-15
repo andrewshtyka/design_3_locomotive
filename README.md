@@ -2,13 +2,14 @@
 
 1. ✅ Menu Mobile
 2. Menu Desktop (white bg)
-2. Loader
-3. Hover: links
-4. Hover: projects
-5. Hover: shopping cards
-6. Hero video
-7. Image pixalization: projects
-8. Image pixalization: shopping cards
-9. 3d interactive: destiny
-10. 3d interactive: about
-11. Cross-browser testing
+3. Loader
+4. Hover: links
+5. Hover: projects
+6. Hover: shopping cards
+7. Hero video
+8. Image pixalization: projects
+9. Image pixalization: shopping cards
+10. 3d interactive: destiny
+11. 3d interactive: about
+12. Cross-browser testing
+13. Smooth scroll

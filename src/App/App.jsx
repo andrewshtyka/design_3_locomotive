@@ -17,7 +17,7 @@ export default function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
-	// check if width is <= 1024 px
+	// check if width is <= 1024 px. If not, then close the menu.
 	useEffect(() => {
 		const handleResize = () => {
 			const nowMobile = window.innerWidth <= 1024;
