@@ -2,7 +2,7 @@
 
 1. ✅ Menu Mobile
 2. ✅ Menu Desktop (white bg)
-3. Loader
+3. ✅ Loader Long + Session Storage (Loader Short)
 4. Hover: links
 5. Hover: projects
 6. Hover: shopping cards
