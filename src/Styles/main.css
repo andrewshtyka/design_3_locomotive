@@ -27,8 +27,8 @@ html:focus-within {
 }
 
 body {
-margin: 0;
-    overflow: hidden;
+	margin: 0;
+	overflow: hidden;
 
 	font-family: "Helvetica Now", sans-serif;
 	font-size: var(--9);
@@ -101,6 +101,45 @@ margin: 0;
 }
 
 /* #endregion = COMPONENTS */
+
+/* #region = OBJECTS */
+
+.o_content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+.o_content_top {
+	grid-column: 5 / 8;
+	grid-row: 1 / 2;
+	align-self: end;
+
+	& span {
+		opacity: 0;
+	}
+}
+
+.o_content_bottom {
+	grid-column: 6 / 9;
+	grid-row: 2 / 3;
+	align-self: start;
+
+	display: flex;
+	flex-direction: column-reverse;
+
+	& span {
+		opacity: 0;
+	}
+}
+
+/* #endregion = OBJECTS */
 
 /* #region = UTILITIES */
 

@@ -1,9 +1,64 @@
-import gsap from "gsap";
+import { gsap } from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
-const MIN_DISPLAY_TIME = 1200;
+gsap.registerPlugin(ScrambleTextPlugin);
+
+const MIN_DISPLAY_TIME = 1400;
 const startTime = performance.now();
 
-function playLoaderAnimation() {
+// ============================================================
+//
+// ANIMATION - LONG
+function LoaderAnimationLong() {
+	console.log("loooooooong");
+
+	const loader = document.getElementById("loader");
+	const textTop = document.getElementById("loader_text_top");
+	const textBottom = document.getElementById("loader_text_bottom");
+	if (!loader || !textTop || !textBottom) return;
+	const textTopElements = Array.from(textTop.children).filter((el) => el.tagName.toLowerCase() !== "br");
+	console.log(textTopElements);
+
+	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-={}[]|:;\"'<>,.?/~`";
+	const textTopTimeline = gsap.timeline({ defaults: { ease: "none" } });
+
+	gsap.set(textTop, {
+		ease: "steps(1)",
+	});
+
+	// TOP TEXT: appear
+	textTopElements.forEach((el, i) => {
+		textTopTimeline.from(
+			el,
+			{
+				onStart: () => {
+					el.style.opacity = "1";
+				},
+				scrambleText: { chars },
+				duration: 0.25,
+			},
+			i === 0 ? 0 : "-=0.1"
+		);
+	});
+
+	textTopElements.forEach((el, i) => {
+		textTopTimeline.to(
+			el,
+			{
+				duration: 0.25,
+				scrambleText: { chars },
+			},
+			i === textTopElements.length - 1 ? "+=3" : "-=0.1"
+		);
+	});
+}
+
+// ============================================================
+//
+// ANIMATION - SHORT
+function LoaderAnimationShort() {
+	console.log("short");
+
 	const loader = document.getElementById("loader");
 	if (!loader) return;
 
@@ -65,14 +120,39 @@ function playLoaderAnimation() {
 	);
 }
 
+// ============================================================
+//
+// SESSION STORAGE:
+// show long animation for first-time visit, for second and later - show second animation
+const KEY = "loaderAnimation";
+let animationType = sessionStorage.getItem(KEY);
+
+if (!animationType) {
+	animationType = "long";
+	sessionStorage.setItem(KEY, "long");
+} else {
+	animationType = "long";
+	sessionStorage.setItem(KEY, "long");
+}
+
+// if (!animationType) {
+// 	animationType = "long";
+// 	sessionStorage.setItem(KEY, "short");
+// } else {
+// 	animationType = "short";
+// 	sessionStorage.setItem(KEY, "short");
+// }
+
 function handleLoaderComplete() {
 	const elapsed = performance.now() - startTime;
 	const remaining = MIN_DISPLAY_TIME - elapsed;
 
+	const runAnimation = animationType === "long" ? LoaderAnimationLong : LoaderAnimationShort;
+
 	if (remaining > 0) {
-		setTimeout(playLoaderAnimation, remaining);
+		setTimeout(runAnimation, remaining);
 	} else {
-		playLoaderAnimation();
+		runAnimation();
 	}
 }
 

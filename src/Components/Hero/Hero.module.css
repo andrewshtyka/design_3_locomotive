@@ -2,7 +2,7 @@
 
 .c_container {
 	height: calc(min(1vh * 100, 80vw));
-	background-color: var(--color-black);
+	background-color: var(--color-blue);
 
 	display: flex;
 	align-items: flex-end;
