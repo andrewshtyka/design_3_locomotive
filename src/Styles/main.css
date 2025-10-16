@@ -27,6 +27,9 @@ html:focus-within {
 }
 
 body {
+margin: 0;
+    overflow: hidden;
+
 	font-family: "Helvetica Now", sans-serif;
 	font-size: var(--9);
 	line-height: 120%;
@@ -79,7 +82,7 @@ body {
 
 .c_loader_logo {
 	opacity: 0;
-	animation: fadeIn 1.5s cubic-bezier(0.215, 0.21, 0.355, 1) 0.5s forwards;
+	animation: fadeIn 2s cubic-bezier(0, 0, 0, 1) 0.5s forwards;
 }
 
 @keyframes fadeIn {
