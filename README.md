@@ -4,7 +4,7 @@
 2. ✅ Menu Desktop (white bg)
 3. ✅ Loader Long + Session Storage (Loader Short)
 4. ✅ Hover: links
-5. Hover: projects
+5. ✅ Hover: projects
 6. ✅ Hover: shopping cards
 7. Hero video
 8. Custom color for text highlighting
@@ -16,5 +16,7 @@
 14. Smooth scroll
 15. Cross-browser testing
 
+### HIDDEN FUNCTIONALITY
 
+// uncomment loader in index.html
 // uncomment overflow:hidden in main.css

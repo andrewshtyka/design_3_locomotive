@@ -1,6 +1,6 @@
 // ShopCard.jsx
 import { useRef } from "react";
-import { createHoverShuffle } from "../../Scripts/HoverShuffle";
+import { createHoverShuffle } from "../../Scripts/hoverShuffle";
 import css from "./ShopCard.module.css";
 
 export function ShopCard({ className, src, alt, linkURL, product_name, product_price }) {
