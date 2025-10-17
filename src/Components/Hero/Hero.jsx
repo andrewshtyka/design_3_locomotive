@@ -1,11 +1,13 @@
-import { forwardRef, useState, useEffect, useRef } from "react";
+// import { forwardRef } from "react";
+import { forwardRef } from "react";
+// import { forwardRef, useState, useEffect, useRef } from "react";
 import css from "./Hero.module.css";
 import posterDesktop from "../../Assets/Video/poster_locomotive_desktop.png";
 import posterMobile from "../../Assets/Video/poster_locomotive_mobile.png";
 
 export const Hero = forwardRef(({ className, isMobile }, ref) => {
-	const [showVideo, setShowVideo] = useState(true);
-	const videoRef = useRef(null);
+	// const [showVideo, setShowVideo] = useState(true);
+	// const videoRef = useRef(null);
 
 	const videoSrc =
 		"https://player.vimeo.com/progressive_redirect/playback/792718372/rendition/1080p/file.mp4?loc=external&log_user=0&signature=978abf9e4b33e3e143901fbcbf68e159d90d5eeb95ed25f8378d341514009cf8";
@@ -61,7 +63,7 @@ export const Hero = forwardRef(({ className, isMobile }, ref) => {
 			</h1>
 
 			<div className={css.o_video_container}>
-				<video ref={videoRef} src={videoSrc} className={css.o_video} autoPlay playsInline muted loop poster={poster} />
+				<video src={videoSrc} className={css.o_video} autoPlay playsInline muted loop poster={poster} />
 
 				{/* {showVideo ? (
 					<video
