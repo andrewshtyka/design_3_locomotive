@@ -13,12 +13,9 @@ export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile,
 					bg && !isMenuOpen ? "background-color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)" : "background-color 0s",
 			}}
 		>
-			<div className={css.c_logo}>
-				<LinkCustom linkURL="#" className={`${css.u_logo_space} u_no_hover u_kerning_normal`}>
-					Locomotive
-				</LinkCustom>
-				&reg;
-			</div>
+			<LinkCustom linkURL="#" className={` ${css.c_logo} u_no_hover u_kerning_normal`} data-symbol="&reg;">
+				Locomotive
+			</LinkCustom>
 			<span className={css.c_icon}></span>
 			<nav className={`${css.o_links} ${css.u_display_none}`}>
 				<ul>
