@@ -30,7 +30,6 @@
 
 :focus-visible {
 	outline-color: black;
-  /* outline: 2px solid black; */
   outline-offset: 0.4rem;
 }
 
@@ -44,7 +43,7 @@ html:focus-within {
 
 body {
 	margin: 0;
-	overflow: hidden;
+	/* overflow: hidden; */
 
 	font-family: "Helvetica Now", sans-serif;
 	font-size: var(--9);
