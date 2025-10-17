@@ -27,7 +27,6 @@ export function ShopCard({ className, src, alt, linkURL, product_name, product_p
 
 			<a
 				ref={linkRef}
-				href={linkURL}
 				onMouseEnter={() => {
 					onMouseEnter({ currentTarget: nameRef.current });
 					onMouseEnter({ currentTarget: priceRef.current });
@@ -36,6 +35,7 @@ export function ShopCard({ className, src, alt, linkURL, product_name, product_p
 					onMouseLeave({ currentTarget: nameRef.current });
 					onMouseLeave({ currentTarget: priceRef.current });
 				}}
+				href={linkURL}
 				className={css.o_link}
 			></a>
 		</article>

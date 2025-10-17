@@ -201,6 +201,7 @@ body {
 	font-family: "Locomotive", serif;
 	font-size: var(--24);
 	line-height: 110%;
+	font-feature-settings: "liga" 1;
 
 	@media (width <= 2400px) {
 		font-size: calc(var(--20) + var(--2));

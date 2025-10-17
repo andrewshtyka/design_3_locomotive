@@ -4,7 +4,7 @@ import css from "./About.module.css";
 export default function About({ className }) {
 	return (
 		<section className={`${css.o_container} ${className ? " " + className : ""}`}>
-			<p className={`f_decor`}>
+			<p className={`f_decor u_kerning_normal`}>
 				🔰Design and code are only tools of expression. What sets us and our work apart is people. We’re a small group
 				of creative thinkers who craft bespoke digital-first brand identities and experiences, tailor-made for you and
 				your audience.🔛🔜
@@ -13,7 +13,7 @@ export default function About({ className }) {
 			<div className={css.o_details}>
 				<div className={css.c_visual}></div>
 				<div className={css.o_description}>
-					<p className={css.o_text_section}>
+					<p className={`${css.o_text_section} u_kerning_normal`}>
 						From strategy to deployment and maintenance, we're the ultimate digital one-stop shop. Over the past 15
 						years, Locomotive® has become a go-to for meaningful, innovative, results-driven digital experiences, web
 						design and branding. Freshness guaranteed.

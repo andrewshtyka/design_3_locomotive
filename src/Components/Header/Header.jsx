@@ -40,12 +40,12 @@ export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile,
 				Let's talk
 			</LinkCustom>
 			{isMobile && (
-				<LinkNoUnderline
-					className={`${css.o_link_talk} ${css.u_display} u_kerning_normal`}
+				<a
+					className={`${css.o_link_talk} ${css.u_display} u_no_hover u_kerning_normal`}
 					onClick={() => setIsMenuOpen(!isMenuOpen)}
 				>
 					{isMenuOpen ? "Close" : "Menu"}
-				</LinkNoUnderline>
+				</a>
 			)}
 		</div>
 	);

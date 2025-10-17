@@ -80,19 +80,38 @@
 }
 
 .o_title_final::before {
-	content: "🕳";
+	content: "";
 	font-size: 50%;
 	position: absolute;
-	top: calc(1.2vw * -1);
+	top: calc(2.7vw * -1);
 	right: 100%;
+
+	animation: 2s linear 0s infinite normal none running flashSymbols;
 }
 
 .o_title_final::after {
-	content: "🔺";
+	content: "";
 	font-size: 50%;
 	position: absolute;
-	top: calc(1.2vw * -1);
+	top: calc(2.7vw * -1);
 	left: 100%;
+
+	animation: 2s linear 0s infinite normal none running flashSymbols;
+}
+
+@keyframes flashSymbols {
+	0% {
+		content: "";
+	}
+	25% {
+		content: "🕳";
+	}
+	50% {
+		content: "";
+	}
+	75% {
+		content: "🔺";
+	}
 }
 
 .o_item_name {

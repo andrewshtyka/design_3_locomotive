@@ -4,7 +4,7 @@ import css from "./Hero.module.css";
 export const Hero = forwardRef(({ className }, ref) => {
 	return (
 		<section ref={ref} className={`${css.c_container} ${className ? " " + className : ""}`}>
-			<h1 className={`f_decor ${css.c_heading}`}>
+			<h1 className={`f_decor u_kerning_normal ${css.c_heading}`}>
 				<span aria-hidden="true">🔶 </span>
 				Locomotive&reg;
 				<br />

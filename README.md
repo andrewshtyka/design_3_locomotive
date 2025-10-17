@@ -15,3 +15,6 @@
 13. 3d interactive: about
 14. Smooth scroll
 15. Cross-browser testing
+
+
+// uncomment overflow:hidden in main.css
