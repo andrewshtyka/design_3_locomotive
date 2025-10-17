@@ -18,6 +18,16 @@
 	box-sizing: border-box;
 }
 
+::selection {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+::-moz-selection {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
 html {
 	text-rendering: optimizeSpeed;
 }
