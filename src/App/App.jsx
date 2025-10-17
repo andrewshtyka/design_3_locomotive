@@ -62,7 +62,7 @@ export default function App() {
 				bg={headerBg}
 			/>
 			<Menu className={css.o_container} isMenuOpen={isMenuOpen} />
-			<Hero className={css.o_container} ref={heroRef} />
+			<Hero className={css.o_container} ref={heroRef} isMobile={isMobile} />
 			<Dynasty className={`${css.o_container} ${css.u_bg_color_white}`} />
 			<Featured className={`${css.o_container} ${css.u_bg_color_white}`} />
 			<About className={`${css.o_container} ${css.u_bg_color_white}`} />
