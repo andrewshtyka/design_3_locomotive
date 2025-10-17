@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { createHoverShuffle } from "../../Scripts/hoverShuffle";
+import { createHoverShuffle } from "../../Scripts/HoverShuffle";
 import css from "./Featured_Item.module.css";
 
 export function Featured_Item({ project_Name, name_1, name_2, src, alt }) {

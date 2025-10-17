@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { createHoverShuffle } from "../../Scripts/hoverShuffle";
+import { createHoverShuffle } from "../../Scripts/HoverShuffle";
 import css from "./LinkCustom.module.css";
 
 // =============================================================================
