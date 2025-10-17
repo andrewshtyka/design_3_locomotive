@@ -53,6 +53,13 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
+	/* pointer-events: none; */
+}
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
 }
 
 /* #endregion = OBJECTS */

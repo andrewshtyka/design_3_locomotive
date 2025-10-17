@@ -19,19 +19,7 @@ export const Hero = forwardRef(({ className, isMobile }, ref) => {
 			</h1>
 
 			<div className={css.o_video_container}>
-				<video
-					className={css.o_video}
-					src={videoSrc}
-					poster={poster}
-					autoplay
-					muted
-					playsinline
-					loop
-					webkit-playsinline
-					controls="false"
-					controlslist="nodownload nofullscreen noremoteplayback"
-					disablepictureinpicture
-				/>
+				<video className={css.o_video} src={videoSrc} autoPlay playsInline muted loop poster={poster} />
 			</div>
 		</section>
 	);
