@@ -1,34 +1,34 @@
-import { forwardRef, useEffect, useState } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import css from "./Hero.module.css";
 import posterDesktop from "../../Assets/Video/poster_locomotive_desktop.png";
 import posterMobile from "../../Assets/Video/poster_locomotive_mobile.png";
 
 export const Hero = forwardRef(({ className, isMobile }, ref) => {
+	const [showVideo, setShowVideo] = useState(true);
+
 	const videoSrc =
 		"https://player.vimeo.com/progressive_redirect/playback/792718372/rendition/1080p/file.mp4?loc=external&log_user=0&signature=978abf9e4b33e3e143901fbcbf68e159d90d5eeb95ed25f8378d341514009cf8";
 
 	const poster = isMobile ? posterMobile : posterDesktop;
-	const [showVideo, setShowVideo] = useState(true);
 
-  useEffect(() => {
-		// iOS та low-power / save-data
-		const isIOS = /iP(hone|od|ad)/.test(navigator.userAgent);
-		const prefersReducedData = window.matchMedia("(prefers-reduced-data: reduce)").matches;
-
-		if (isIOS || prefersReducedData) {
-			setShowVideo(false);
-			return;
+	useEffect(() => {
+		// Перевірка через Data Saver API
+		if ("connection" in navigator && "saveData" in navigator.connection) {
+			if (navigator.connection.saveData) {
+				setShowVideo(false);
+				return;
+			}
 		}
 
-		if (navigator.getBattery) {
-			navigator.getBattery().then((battery) => {
-				if (battery.level < 0.2) setShowVideo(false);
-			});
+		// Перевірка через prefers-reduced-motion (часто включається разом з Low Power Mode)
+		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		if (prefersReducedMotion) {
+			setShowVideo(false);
 		}
 	}, []);
 
 	return (
-		<section ref={ref} className={`${css.c_container} ${className ? " " + className : ""}`}>
+		<section ref={ref} className={`${css.c_container}${className ? " " + className : ""}`}>
 			<h1 className={`f_decor u_kerning_normal ${css.c_heading}`}>
 				<span aria-hidden="true">🔶 </span>
 				Locomotive&reg;
@@ -38,9 +38,12 @@ export const Hero = forwardRef(({ className, isMobile }, ref) => {
 
 			<div className={css.o_video_container}>
 				{showVideo ? (
-					<video className={css.o_video} src={videoSrc} autoPlay playsInline muted loop poster={poster} />
+					<video className={css.o_video} autoPlay playsInline muted loop poster={poster}>
+						<source src={videoSrc} type="video/mp4" />
+						<img src={poster} alt="Locomotive Agency" />
+					</video>
 				) : (
-					<img className={css.o_video} src={poster} alt="Poster" />
+					<img src={poster} alt="Locomotive Agency" className={css.o_video} />
 				)}
 			</div>
 		</section>
