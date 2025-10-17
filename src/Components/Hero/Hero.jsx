@@ -8,14 +8,21 @@ export const Hero = forwardRef(({ className, isMobile }, ref) => {
 		"https://player.vimeo.com/progressive_redirect/playback/792718372/rendition/1080p/file.mp4?loc=external&log_user=0&signature=978abf9e4b33e3e143901fbcbf68e159d90d5eeb95ed25f8378d341514009cf8";
 
 	const poster = isMobile ? posterMobile : posterDesktop;
-	const [showVideo, setShowVideo] = useState(false);
+	const [showVideo, setShowVideo] = useState(true);
 
-	useEffect(() => {
+  useEffect(() => {
+		// iOS та low-power / save-data
+		const isIOS = /iP(hone|od|ad)/.test(navigator.userAgent);
+		const prefersReducedData = window.matchMedia("(prefers-reduced-data: reduce)").matches;
+
+		if (isIOS || prefersReducedData) {
+			setShowVideo(false);
+			return;
+		}
+
 		if (navigator.getBattery) {
 			navigator.getBattery().then((battery) => {
-				if (battery.level > 0.2 || !battery.savePowerMode) {
-					setShowVideo(true);
-				}
+				if (battery.level < 0.2) setShowVideo(false);
 			});
 		}
 	}, []);
@@ -31,7 +38,7 @@ export const Hero = forwardRef(({ className, isMobile }, ref) => {
 
 			<div className={css.o_video_container}>
 				{showVideo ? (
-					<video className={css.o_video} src={videoSrc} autoPlay playsInline muted loop />
+					<video className={css.o_video} src={videoSrc} autoPlay playsInline muted loop poster={poster} />
 				) : (
 					<img className={css.o_video} src={poster} alt="Poster" />
 				)}
