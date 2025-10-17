@@ -7,7 +7,7 @@
 5. ✅ Hover: projects
 6. ✅ Hover: shopping cards
 7. ✅ Hero video
-8. Custom color for text highlighting
+8. ✅ Custom color for text highlighting
 9. Custom styles for focus state
 10. Image pixalization: projects
 11. Image pixalization: shopping cards
