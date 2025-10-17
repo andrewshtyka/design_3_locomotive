@@ -3,15 +3,13 @@ import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 gsap.registerPlugin(ScrambleTextPlugin);
 
-const MIN_DISPLAY_TIME = 1400;
+const MIN_DISPLAY_TIME = 1200;
 const startTime = performance.now();
 
 // ============================================================
 //
 // ANIMATION - LONG
 function LoaderAnimationLong() {
-	console.log("loooooooong");
-
 	const text1 = document.getElementById("text1");
 	const text2 = document.getElementById("text2");
 	const text3 = document.getElementById("text3");
@@ -438,7 +436,7 @@ function LoaderAnimationLong() {
 
 				onComplete: () => {
 					loader.remove();
-					document.documentElement.style.backgroundColor = "";
+					// document.documentElement.style.backgroundColor = "";
 				},
 			},
 			"< -0.5"
@@ -449,8 +447,6 @@ function LoaderAnimationLong() {
 //
 // ANIMATION - SHORT
 function LoaderAnimationShort() {
-	console.log("short");
-
 	const loader = document.getElementById("loader");
 	if (!loader) return;
 

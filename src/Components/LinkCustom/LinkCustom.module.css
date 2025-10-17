@@ -63,3 +63,7 @@
 }
 
 /* ========== LinkNoUnderline ========== */
+
+.c_link_no_underline {
+	cursor: pointer;
+}

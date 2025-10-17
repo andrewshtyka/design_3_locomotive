@@ -98,4 +98,8 @@
 	}
 }
 
+.u_logo_space {
+	margin-inline-end: var(--0_5);
+}
+
 /* #endregion = UTILITIES */

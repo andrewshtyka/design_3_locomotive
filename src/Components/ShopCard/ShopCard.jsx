@@ -1,6 +1,14 @@
+// ShopCard.jsx
+import { useRef } from "react";
+import { createHoverShuffle } from "../../Scripts/HoverShuffle";
 import css from "./ShopCard.module.css";
 
 export function ShopCard({ className, src, alt, linkURL, product_name, product_price }) {
+	const nameRef = useRef();
+	const priceRef = useRef();
+	const linkRef = useRef();
+	const { onMouseEnter, onMouseLeave } = createHoverShuffle();
+
 	return (
 		<article className={`${css.o_card} ${className ? className : ""}`}>
 			<div>
@@ -8,12 +16,28 @@ export function ShopCard({ className, src, alt, linkURL, product_name, product_p
 			</div>
 
 			<div className={css.o_details}>
-				<span className={css.o_name}>{product_name}</span>
-				<span className={css.o_button}>Buy now→</span>
+				<span ref={nameRef} className={css.o_name}>
+					{product_name}
+				</span>
+				<span ref={priceRef} className={css.o_button}>
+					Buy now→
+				</span>
 				<span className={css.o_price}>{product_price}</span>
 			</div>
 
-			<a className={css.o_link} href={linkURL}></a>
+			<a
+				ref={linkRef}
+				href={linkURL}
+				onMouseEnter={() => {
+					onMouseEnter({ currentTarget: nameRef.current });
+					onMouseEnter({ currentTarget: priceRef.current });
+				}}
+				onMouseLeave={() => {
+					onMouseLeave({ currentTarget: nameRef.current });
+					onMouseLeave({ currentTarget: priceRef.current });
+				}}
+				className={css.o_link}
+			></a>
 		</article>
 	);
 }

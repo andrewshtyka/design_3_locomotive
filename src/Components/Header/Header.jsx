@@ -1,4 +1,4 @@
-import { LinkCustom } from "../LinkCustom/LinkCustom";
+import { LinkCustom, LinkNoUnderline } from "../LinkCustom/LinkCustom";
 import css from "./Header.module.css";
 
 export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile, bg }) {
@@ -13,10 +13,12 @@ export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile,
 					bg && !isMenuOpen ? "background-color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)" : "background-color 0s",
 			}}
 		>
-			<LinkCustom linkURL="#" className={`${css.c_logo} u_no_hover u_kerning_normal`}>
-				<span>Locomotive</span>
+			<div className={css.c_logo}>
+				<LinkCustom linkURL="#" className={`${css.u_logo_space} u_no_hover u_kerning_normal`}>
+					Locomotive
+				</LinkCustom>
 				&reg;
-			</LinkCustom>
+			</div>
 			<span className={css.c_icon}></span>
 			<nav className={`${css.o_links} ${css.u_display_none}`}>
 				<ul>
@@ -38,12 +40,12 @@ export default function Header({ className, isMenuOpen, setIsMenuOpen, isMobile,
 				Let's talk
 			</LinkCustom>
 			{isMobile && (
-				<LinkCustom
-					className={`${css.o_link_talk} ${css.u_display} u_no_hover u_kerning_normal`}
+				<LinkNoUnderline
+					className={`${css.o_link_talk} ${css.u_display} u_kerning_normal`}
 					onClick={() => setIsMenuOpen(!isMenuOpen)}
 				>
 					{isMenuOpen ? "Close" : "Menu"}
-				</LinkCustom>
+				</LinkNoUnderline>
 			)}
 		</div>
 	);

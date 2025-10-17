@@ -51,39 +51,6 @@ export default function App() {
 
 	// ======================================================================
 	//
-	// LOADER
-	// useEffect(() => {
-	// 	const loader = document.getElementById("loader");
-	// 	if (!loader) return;
-
-	// 	const MIN_DISPLAY = 2000;
-	// 	const startTime = Date.now();
-
-	// 	const hideLoader = () => {
-	// 		const elapsed = Date.now() - startTime;
-	// 		const remaining = MIN_DISPLAY - elapsed;
-
-	// 		setTimeout(
-	// 			() => {
-	// 				loader.style.opacity = "0";
-	// 				document.documentElement.style.backgroundColor = "";
-	// 				setTimeout(() => loader.remove(), MIN_DISPLAY);
-	// 			},
-	// 			remaining > 0 ? remaining : 0
-	// 		);
-	// 	};
-
-	// 	if (document.readyState === "complete") {
-	// 		hideLoader();
-	// 	} else {
-	// 		window.addEventListener("load", hideLoader);
-	// 	}
-
-	// 	return () => window.removeEventListener("load", hideLoader);
-	// }, []);
-
-	// ======================================================================
-	//
 	// MARKUP
 	return (
 		<div>

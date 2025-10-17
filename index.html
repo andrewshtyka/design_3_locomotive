@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #000000">
+<html lang="en" style="background-color: black">
 	<head>
 		<meta charset="UTF-8" />
 		<title>Locomotive</title>
 
 		<!-- Viewport -->
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<link
-			rel="preload"
-			href="/src/Assets/Fonts/Helvetica Now Display Regular.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
-		<link rel="preload" href="/src/Assets/Fonts/Locomotive Light Font.woff2" as="font" type="font/woff2" crossorigin />
 
 		<!-- Appearance, Fonts -->
 		<link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
@@ -21,7 +13,7 @@
 			id="main-css"
 			rel="stylesheet"
 			href="./src/Styles/main.css"
-			media="print"
+			media="all"
 			onload="this.media='all'; this.onload=null; this.isLoaded=true"
 		/>
 
@@ -484,6 +476,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div id="root"></div>
 		<script src="./src/Scripts/loader.js" type="module"></script>
 		<script type="module" src="/src/main.jsx"></script>
