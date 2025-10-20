@@ -15,7 +15,8 @@
 13. 3d interactive: destiny
 14. 3d interactive: about
 15. Smooth scroll
-16. Cross-browser testing
+16. Optimize performance / animations
+17. Cross-browser testing
 
 ### HIDDEN FUNCTIONALITY
 
