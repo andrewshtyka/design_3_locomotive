@@ -26,7 +26,7 @@
 	}
 
 	@media (width <= 700px) {
-		height: 100svh;
+		height: calc(100svh - var(--header-height));
 		padding-block-end: var(--8);
 	}
 }
