@@ -9,6 +9,7 @@
 7. ✅ Hero video
 8. ✅ Custom color for text highlighting
 9. ✅ Custom styles for focus state
+9. ✅ Fix header repaints
 10. Parallax hero screen
 11. Image pixalization: projects
 12. Image pixalization: shopping cards
