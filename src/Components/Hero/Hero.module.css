@@ -1,7 +1,10 @@
 /* #region = COMPONENTS */
 
 .c_container {
-	height: calc(min(1vh * 100, 80vw));
+	/* will-change: transform; */
+	/* transform: translateZ(0); */
+
+	height: calc(min(1vh * 100 - var(--header-height), 80vw));
 
 	display: flex;
 	align-items: flex-end;
@@ -42,7 +45,8 @@
 .o_video_container {
 	position: absolute;
 	inset: 0;
-	width: 100%;
+	/* width: 100%; */
+	/* height: 100%; */
 }
 
 .o_video {

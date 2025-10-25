@@ -27,33 +27,22 @@
 	grid-column: 1 / 3;
 }
 
-.c_logo::after{
+.c_logo::after {
 	content: attr(data-symbol);
 	margin-inline-start: var(--0_5);
 }
 
 .c_menu {
-	position: fixed;
-	z-index: 900;
+	position: sticky;
+	top: 0;
+	z-index: 999;
 
 	display: grid;
 	align-items: center;
 	grid-template-columns: repeat(12, 1fr);
 	gap: var(--5);
 	width: 100%;
-	height: var(--20);
-
-	@media (width <= 2400px) {
-		height: calc(var(--16) + var(--2));
-	}
-
-	@media (width <= 2000px) {
-		height: var(--16);
-	}
-
-	@media (width <= 1024px) {
-		height: calc(var(--14) + var(--1));
-	}
+	height: var(--header-height);
 }
 
 /* #endregion = COMPONENTS */
@@ -103,6 +92,5 @@
 		display: inline;
 	}
 }
-
 
 /* #endregion = UTILITIES */
