@@ -62,6 +62,6 @@ export async function animDepixelate($el) {
 	}
 
 	window.removeEventListener("resize", resizeHandler);
-	// canvas.remove();
-	// $parent.classList.remove("-pixelated");
+	canvas.remove();
+	$parent.classList.remove("-pixelated");
 }
