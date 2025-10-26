@@ -1,3 +1,6 @@
+// ==========================================================================================
+//
+// depixelization on hover
 export async function animDepixelate($el) {
 	if (!$el.complete) await new Promise((r) => ($el.onload = r));
 
@@ -64,4 +67,83 @@ export async function animDepixelate($el) {
 	window.removeEventListener("resize", resizeHandler);
 	canvas.remove();
 	$parent.classList.remove("-pixelated");
+}
+
+// ==========================================================================================
+//
+// depixelization on scroll
+export function animDepixelateOnScroll($el) {
+	if (!$el || !$el.complete) {
+		$el.onload = () => animDepixelateOnScroll($el);
+		return;
+	}
+
+	const $parent = $el.parentNode;
+	const canvas = $parent.querySelector("canvas");
+	if (!canvas) return;
+
+	const ctx = canvas.getContext("2d", { willReadFrequently: true });
+
+	function updateSize() {
+		const rect = $el.getBoundingClientRect();
+		canvas.width = rect.width;
+		canvas.height = rect.height;
+		return { w: canvas.width, h: canvas.height };
+	}
+
+	const PIXEL_STEPS = [32, 48, 96, 128];
+	const INITIAL_PIXEL = 32;
+	const DELAY_MS = 100;
+
+	let depixelized = false; // comment this to free animation
+
+	function pixelate(sample) {
+		const { w, h } = updateSize();
+		ctx.drawImage($el, 0, 0, w, h);
+		const data = ctx.getImageData(0, 0, w, h).data;
+		const step = Math.round(w / sample);
+
+		for (let y = 0; y < h; y += step) {
+			for (let x = 0; x < w; x += step) {
+				const i = (x + y * w) * 4;
+				ctx.fillStyle = `rgb(${data[i]},${data[i + 1]},${data[i + 2]})`;
+				ctx.fillRect(x, y, step, step);
+			}
+		}
+	}
+
+	pixelate(INITIAL_PIXEL);
+
+	async function depixelize() {
+		if (depixelized) return; // comment this to free animation
+		depixelized = true; // comment this to free animation
+		canvas.style.pointerEvents = "auto";
+
+		for (const step of PIXEL_STEPS) {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			pixelate(step);
+			await new Promise((r) => setTimeout(r, DELAY_MS));
+		}
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		canvas.style.pointerEvents = "none";
+	}
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !depixelized) depixelize(); // comment this to free animation
+
+				// if (entry.isIntersecting) depixelize();
+				// else pixelate(INITIAL_PIXEL);
+			});
+		},
+		{ threshold: [0.4] }
+	);
+
+	observer.observe($el);
+
+	window.addEventListener("resize", () => {
+		updateSize();
+		pixelate(INITIAL_PIXEL);
+	});
 }

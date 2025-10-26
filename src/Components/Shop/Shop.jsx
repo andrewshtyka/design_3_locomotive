@@ -1,3 +1,6 @@
+import tShirtURL from "../../Assets/Images/pros-de-linternet-white-t-shirt.jpg";
+import capURL from "../../Assets/Images/pros-de-linternet-sand-cap.jpg";
+
 import { ShopCard } from "../ShopCard/ShopCard";
 import css from "./Shop.module.css";
 
@@ -6,7 +9,7 @@ export function Shop({ className }) {
 		<section className={`${css.o_container} ${className ? " " + className : ""}`}>
 			<ShopCard
 				className={css.c_card_1}
-				src="https://locomotive.ca/assets/images/temp/pros-de-linternet-white-t-shirt.jpg"
+				src={tShirtURL}
 				alt="T-Shirt"
 				linkURL="#"
 				product_name="Pros de l'internet White T-Shirt"
@@ -14,7 +17,7 @@ export function Shop({ className }) {
 			/>
 			<ShopCard
 				className={css.c_card_2}
-				src="https://locomotive.ca/assets/images/temp/pros-de-linternet-sand-cap.jpg"
+				src={capURL}
 				alt="Cap"
 				linkURL="#"
 				product_name="Pros de l'internet Sand Hat"

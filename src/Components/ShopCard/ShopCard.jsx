@@ -1,18 +1,27 @@
 // ShopCard.jsx
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { animDepixelateOnScroll } from "../../Scripts/pixelateImage";
 import { createHoverShuffle } from "../../Scripts/HoverShuffle";
 import css from "./ShopCard.module.css";
 
 export function ShopCard({ className, src, alt, linkURL, product_name, product_price }) {
+	// letters shuffle effect
 	const nameRef = useRef();
 	const priceRef = useRef();
 	const linkRef = useRef();
 	const { onMouseEnter, onMouseLeave } = createHoverShuffle();
 
+	// image pixelization on scroll
+	const imgRef = useRef();
+	useEffect(() => {
+		animDepixelateOnScroll(imgRef.current);
+	}, []);
+
 	return (
 		<article className={`${css.o_card} ${className ? className : ""}`}>
-			<div>
-				<img src={src} alt={alt} />
+			<div className={css.o_image_wrapper}>
+				<img ref={imgRef} src={src} alt={alt} />
+				<canvas className={css.o_canvas}></canvas>
 			</div>
 
 			<div className={css.o_details}>
