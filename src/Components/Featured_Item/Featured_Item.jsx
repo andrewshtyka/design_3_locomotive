@@ -40,7 +40,9 @@ export function Featured_Item({ project_Name, name_1, name_2, src, alt }) {
 					onMouseEnter({ currentTarget: textRef_1.current });
 					if (name_2) onMouseEnter({ currentTarget: textRef_2.current });
 
-					animDepixelate(imgRef.current);
+					if (window.innerWidth > 700) {
+						animDepixelate(imgRef.current);
+					}
 				}}
 				onMouseLeave={(e) => {
 					onMouseLeave({ currentTarget: textRef_1.current });
