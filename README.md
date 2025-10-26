@@ -9,15 +9,15 @@
 7. ✅ Hero video
 8. ✅ Custom color for text highlighting
 9. ✅ Custom styles for focus state
-9. ✅ Fix header repaints
-10. Parallax hero screen
-11. Image pixalization: projects
-12. Image pixalization: shopping cards
-13. 3d interactive: destiny
-14. 3d interactive: about
-15. Smooth scroll
-16. Optimize performance / animations
-17. Cross-browser testing
+10. ✅ Fix header repaints
+11. ✅ Parallax hero screen
+12. Image pixalization: projects
+13. Image pixalization: shopping cards
+14. 3d interactive: destiny
+15. 3d interactive: about
+16. Smooth scroll
+17. Optimize performance / animations
+18. Cross-browser testing
 
 ### HIDDEN FUNCTIONALITY
 

@@ -51,6 +51,26 @@ export default function App() {
 
 	// ======================================================================
 	//
+	// HERO SCROLL PROGRESS (0 → 1)
+	const [heroProgress, setHeroProgress] = useState(0);
+
+	useEffect(() => {
+		if (!heroRef.current) return;
+
+		const handleScroll = () => {
+			const rect = heroRef.current.getBoundingClientRect();
+			const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1);
+			setHeroProgress(progress);
+		};
+
+		handleScroll();
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	// ======================================================================
+	//
 	// MARKUP
 	return (
 		<div>
@@ -62,7 +82,7 @@ export default function App() {
 				bg={headerBg}
 			/>
 			<Menu className={css.o_container} isMenuOpen={isMenuOpen} />
-			<Hero className={css.o_container} ref={heroRef} isMobile={isMobile} />
+			<Hero className={css.o_container} ref={heroRef} isMobile={isMobile} progress={heroProgress} />
 			<Dynasty className={`${css.o_container} ${css.u_bg_color_white}`} />
 			<Featured className={`${css.o_container} ${css.u_bg_color_white}`} />
 			<About className={`${css.o_container} ${css.u_bg_color_white}`} />
