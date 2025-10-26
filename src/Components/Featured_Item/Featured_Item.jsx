@@ -3,6 +3,7 @@ import { createHoverShuffle } from "../../Scripts/HoverShuffle";
 import css from "./Featured_Item.module.css";
 
 export function Featured_Item({ project_Name, name_1, name_2, src, alt }) {
+	// letters shuffle effect
 	const textRef_1 = useRef();
 	const textRef_2 = useRef();
 	const linkRef = useRef();
@@ -17,7 +18,8 @@ export function Featured_Item({ project_Name, name_1, name_2, src, alt }) {
 					{name_1}
 				</span>
 				<div className={css.o_image_wrapper}>
-					<img className={css.c_image} src={src} alt={alt} />
+					{/* <div> */}
+					<img ref={imgRef} className={css.c_image} src={src} alt={alt} />
 				</div>
 				{name_2 && (
 					<span ref={textRef_2} className={`f_project_title u_kerning_normal ${css.o_title_name}`}>

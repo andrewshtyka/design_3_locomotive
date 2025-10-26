@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pixi/filter-pixelate": "^5.1.1",
     "gsap": "^3.13.0",
     "motion": "^12.23.24",
+    "pixi-filters": "^6.1.4",
+    "pixi.js": "^8.14.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
