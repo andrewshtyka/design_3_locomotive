@@ -130,10 +130,12 @@
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	padding-inline: 0.7vw;
+	margin-inline: 0.7vw;
+
+	position: relative;
 
 	width: 0;
-	transition: width 0.3s cubic-bezier(0, 0, 0, 1);
+	transition: width 0.3s cubic-bezier(0.3, 0.3, 0, 1);
 }
 
 .c_item:hover .o_image_wrapper {
@@ -154,4 +156,16 @@
 	}
 }
 
+.pixelate_target {
+	display: flex;
+	height: 7.5vw;
+
+	@media (width <= 700px) {
+		height: var(--10);
+	}
+}
+
+.-pixelated {
+	position: relative;
+}
 /* #endregion = OBJECT */

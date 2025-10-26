@@ -11,7 +11,7 @@
 9. ✅ Custom styles for focus state
 10. ✅ Fix header repaints
 11. ✅ Parallax hero screen
-12. Image pixalization: projects
+12. ✅ Image pixalization: projects
 13. Image pixalization: shopping cards
 14. 3d interactive: destiny
 15. 3d interactive: about
