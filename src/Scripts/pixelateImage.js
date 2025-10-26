@@ -91,8 +91,8 @@ export function animDepixelateOnScroll($el) {
 		return { w: canvas.width, h: canvas.height };
 	}
 
-	const PIXEL_STEPS = [32, 48, 96, 128];
-	const INITIAL_PIXEL = 32;
+	const PIXEL_STEPS = [8, 16, 32, 48, 96, 128];
+	const INITIAL_PIXEL = 8;
 	const DELAY_MS = 100;
 
 	let depixelized = false; // comment this to free animation
