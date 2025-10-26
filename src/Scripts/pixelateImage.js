@@ -95,7 +95,7 @@ export function animDepixelateOnScroll($el) {
 	const INITIAL_PIXEL = 8;
 	const DELAY_MS = 100;
 
-	let depixelized = false; // comment this to free animation
+	let depixelized = false; // контроль для одного виконання
 
 	function pixelate(sample) {
 		const { w, h } = updateSize();
@@ -112,11 +112,12 @@ export function animDepixelateOnScroll($el) {
 		}
 	}
 
+	// пікселізація одразу при завантаженні
 	pixelate(INITIAL_PIXEL);
 
 	async function depixelize() {
-		if (depixelized) return; // comment this to free animation
-		depixelized = true; // comment this to free animation
+		if (depixelized) return;
+		depixelized = true; // після першого запуску більше не буде
 		canvas.style.pointerEvents = "auto";
 
 		for (const step of PIXEL_STEPS) {
@@ -131,10 +132,7 @@ export function animDepixelateOnScroll($el) {
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting && !depixelized) depixelize(); // comment this to free animation
-
-				// if (entry.isIntersecting) depixelize();
-				// else pixelate(INITIAL_PIXEL);
+				if (entry.isIntersecting && !depixelized) depixelize();
 			});
 		},
 		{ threshold: [0.4] }
@@ -143,7 +141,7 @@ export function animDepixelateOnScroll($el) {
 	observer.observe($el);
 
 	window.addEventListener("resize", () => {
+		if (!depixelized) pixelate(INITIAL_PIXEL);
 		updateSize();
-		pixelate(INITIAL_PIXEL);
 	});
 }
