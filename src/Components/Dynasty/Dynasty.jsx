@@ -14,7 +14,7 @@ export default function Dynasty({ className }) {
 
 	return (
 		<section className={`${css.o_container} ${className ? " " + className : ""}`}>
-			<span className={css.o_years}>&copy;2008-2025</span>
+			<span className={css.o_years}>&copy;2008-{new Date().getFullYear()}</span>
 
 			<div className={css.o_canvas}>
 				<div className={css.o_canvas_wrapper}>

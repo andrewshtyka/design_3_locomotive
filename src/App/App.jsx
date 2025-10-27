@@ -12,7 +12,7 @@ import { Footer } from "../Components/Footer/Footer";
 import { FooterAddress } from "../Components/FooterAddress/FooterAddress";
 
 import css from "./App.module.css";
-import { ReactLenis } from "lenis/react";
+import Lenis from "lenis";
 
 export default function App() {
 	// ======================================================================
@@ -73,25 +73,24 @@ export default function App() {
 	// ======================================================================
 	//
 	// LENIS SCROLL
-	const lenisRef = useRef();
 	useEffect(() => {
-		function update(time) {
-			lenisRef.current?.lenis?.raf(time);
-		}
-		const rafId = requestAnimationFrame(update);
-		return () => cancelAnimationFrame(rafId);
-	}, []);
+		const optionsLenis = {
+			lerp: 0.1,
+		};
 
-	const optionsLenis = {
-		lerp: 0.1,
-	};
+		const lenis = new Lenis(optionsLenis);
+		function raf(time) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
+	}, []);
 
 	// ======================================================================
 	//
 	// MARKUP
 	return (
 		<div>
-			<ReactLenis root options={optionsLenis} ref={lenisRef} />
 			<Header
 				className={css.o_container}
 				isMenuOpen={isMenuOpen}
