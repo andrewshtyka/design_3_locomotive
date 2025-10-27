@@ -136,12 +136,14 @@
 	position: relative;
 
 	width: 0;
-	transition: width 0.3s cubic-bezier(0.3, 0.3, 0, 1);
+	clip-path: inset(0 50% 0 50%);
+	transition: width 0.3s cubic-bezier(0.3, 0.3, 0, 1), clip-path 0.3s cubic-bezier(0.3, 0.3, 0, 1);
 }
 
 @media (width > 700px) {
 	.c_item:hover .o_image_wrapper {
 		width: 12vw;
+		clip-path: inset(0 0 0 0);
 	}
 }
 
