@@ -436,7 +436,7 @@ function LoaderAnimationLong() {
 
 				onComplete: () => {
 					loader.remove();
-					// document.documentElement.style.backgroundColor = "";
+					document.documentElement.style.backgroundColor = "#fff";
 				},
 			},
 			"< -0.5"
@@ -461,7 +461,7 @@ function LoaderAnimationShort() {
 				ease: "power2.inOut",
 				onComplete: () => {
 					loader.remove();
-					document.documentElement.style.backgroundColor = "";
+					document.documentElement.style.backgroundColor = "#fff";
 				},
 			});
 		},

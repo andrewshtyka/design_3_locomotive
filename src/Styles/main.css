@@ -169,6 +169,10 @@ body {
 	}
 
 	@media (width <= 1024px) {
+		grid-column: 7 / 13;
+	}
+
+	@media (width <= 700px) {
 		grid-column: 4 / 13;
 	}
 }
