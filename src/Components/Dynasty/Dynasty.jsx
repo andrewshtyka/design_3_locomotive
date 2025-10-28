@@ -3,7 +3,7 @@ import { LinkCustomLine } from "../LinkCustom/LinkCustom";
 import css from "./Dynasty.module.css";
 
 export default function Dynasty({ className }) {
-	const [isDesktop, setIsDesktop] = useState(() => window.matchMedia("(min-width: 1024px)").matches);
+	const [isDesktop, setIsDesktop] = useState(() => window.matchMedia("(min-width: 1025px)").matches);
 
 	useEffect(() => {
 		const mediaQuery = window.matchMedia("(min-width: 1024px)");
