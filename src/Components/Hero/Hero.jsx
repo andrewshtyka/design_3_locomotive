@@ -14,7 +14,7 @@ export const Hero = forwardRef(({ className, isMobile, progress }, ref) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			refVideo.current?.play();
-		}, 2000);
+		}, 1500);
 
 		return () => clearTimeout(timer);
 	}, []);
