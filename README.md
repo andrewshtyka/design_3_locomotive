@@ -2,8 +2,8 @@
 
 For training purposes. </br>
 </br>
-Remake: https://www.design-3-locomotive.vercel.app/ </br>
-Original website: https://www.locomotive.ca/
+Remake: https://design-3-locomotive.vercel.app/ </br>
+Original website: https://locomotive.ca/
 
 ## Tech stack
 
