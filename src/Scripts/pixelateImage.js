@@ -1,6 +1,6 @@
 // ==========================================================================================
 //
-// depixelization on hover
+// depixelization on hover (for Featured projects)
 export async function animDepixelate($el) {
 	if (!$el.complete) await new Promise((r) => ($el.onload = r));
 
@@ -65,13 +65,13 @@ export async function animDepixelate($el) {
 	}
 
 	window.removeEventListener("resize", resizeHandler);
-	canvas.remove();
+	canvas.remove(); 
 	$parent.classList.remove("-pixelated");
 }
 
 // ==========================================================================================
 //
-// depixelization on scroll
+// depixelization on scroll (for Shop)
 export function animDepixelateOnScroll($el) {
 	if (!$el || !$el.complete) {
 		$el.onload = () => animDepixelateOnScroll($el);
@@ -95,7 +95,7 @@ export function animDepixelateOnScroll($el) {
 	const INITIAL_PIXEL = 8;
 	const DELAY_MS = 100;
 
-	let depixelized = false; // контроль для одного виконання
+	let depixelized = false; // flag, to make the effect only run once - when in viewport
 
 	function pixelate(sample) {
 		const { w, h } = updateSize();
@@ -112,12 +112,12 @@ export function animDepixelateOnScroll($el) {
 		}
 	}
 
-	// пікселізація одразу при завантаженні
+	// pixelate by default (when page is loaded)
 	pixelate(INITIAL_PIXEL);
 
 	async function depixelize() {
 		if (depixelized) return;
-		depixelized = true; // після першого запуску більше не буде
+		depixelized = true;
 		canvas.style.pointerEvents = "auto";
 
 		for (const step of PIXEL_STEPS) {
@@ -127,6 +127,7 @@ export function animDepixelateOnScroll($el) {
 		}
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		canvas.style.pointerEvents = "none";
+		canvas.remove(); 
 	}
 
 	const observer = new IntersectionObserver(
